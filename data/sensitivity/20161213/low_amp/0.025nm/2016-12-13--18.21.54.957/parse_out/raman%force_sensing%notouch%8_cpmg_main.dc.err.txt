@@ -1,0 +1,1 @@
+Finished parsing: c:\qc\userData\penning\autodc\raman%force_sensing%notouch%8_cpmg_main.dc, 0 Errors, 0 Warnings, Success!

@@ -1,0 +1,488 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.23)  23 DEC 2016 16:38
+entering extended mode
+**./force_sensing_vers2.tex
+(force_sensing_vers2.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\revtex\revtex4-1.cls"
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+\eqncolsep=\skip41
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\footins@recovered=\box32
+\column@recovered=\box33
+\pagesofar=\box34
+\footsofar=\box35
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5578.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count91
+\fbox@1=\box36
+\c@table=\count92
+\fbox@2=\box37
+\c@video=\count93
+\fbox@4=\box38
+\@bibdataout=\write3
+\widetext@top=\box39
+\widetext@bot=\box40
+Class revtex4-1 Info: Selecting society aps on input line 7542.
+("C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps4-1.rtx"
+File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
+mentation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+Class revtex4-1 Info: Selecting journal prl on input line 7544.
+Class revtex4-1 Info: APS journal PRL selected on input line 7545.
+
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps10pt4-1.rtx"
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
+documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip44
+\bibsep=\skip45
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\revtex\revsymb4-1.sty"
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
+or documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen104
+\captionmargin@=\dimen105
+\captionwidth=\dimen106
+\caption@tempdima=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+\c@KVtest=\count96
+\sf@farskip=\skip46
+\sf@captopadj=\dimen111
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count97
+\c@subfigure@save=\count98
+\c@lofdepth=\count99
+\c@subtable=\count100
+\c@subtable@save=\count101
+\c@lotdepth=\count102
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\braket\braket.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen112
+\calc@Bdimen=\dimen113
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count105
+\calc@Cskip=\skip53
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen114
+)
+LaTeX Info: Redefining \text on input line 28.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen115
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count106
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count107
+\leftroot@=\count108
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count109
+\DOTSCASE@=\count110
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen116
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count111
+\c@MaxMatrixCols=\count112
+\dotsspace@=\muskip11
+\c@parentequation=\count113
+\dspbrk@lvl=\count114
+\tag@help=\toks18
+\row@=\count115
+\column@=\count116
+\maxfields@=\count117
+\andhelp@=\toks19
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
+\@envbody=\toks20
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count118
+\l_MT_multwidth_dim=\dimen123
+\origjot=\skip57
+\l_MT_shortvdotswithinadjustabove_dim=\dimen124
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen125
+\l_MT_above_intertext_sep=\dimen126
+\l_MT_below_intertext_sep=\dimen127
+\l_MT_above_shortintertext_sep=\dimen128
+\l_MT_below_shortintertext_sep=\dimen129
+)
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 40.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 40.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 40.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 40.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 40.
+
+(force_sensing_vers2.aux)
+\openout1 = `force_sensing_vers2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen130
+\scratchbox=\box43
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen131
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks23
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+\openout3 = `force_sensing_vers2Notes.bib'.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+
+Underfull \hbox (badness 1910) in paragraph at lines 181--182
+[]\OT1/cmr/m/n/10 Crystals of laser-cooled, trapped ions be-have as
+ []
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<figures/penning_trap.png, id=16, 375.65344pt x 510.40688pt>
+File: figures/penning_trap.png Graphic file (type png)
+
+<use figures/penning_trap.png>
+Package pdftex.def Info: figures/penning_trap.png used on input line 220.
+(pdftex.def)             Requested size: 122.4028pt x 166.30861pt.
+
+<figures/level_diagram.pdf, id=18, 193.22188pt x 219.31938pt>
+File: figures/level_diagram.pdf Graphic file (type pdf)
+
+<use figures/level_diagram.pdf>
+Package pdftex.def Info: figures/level_diagram.pdf used on input line 222.
+(pdftex.def)             Requested size: 122.4028pt x 138.93494pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./figures/penning_trap.png> <./figures/level_diagram.pdf>]
+<figures/dephasing.png, id=54, 260.47313pt x 242.40562pt>
+File: figures/dephasing.png Graphic file (type png)
+
+<use figures/dephasing.png>
+Package pdftex.def Info: figures/dephasing.png used on input line 239.
+(pdftex.def)             Requested size: 76.49689pt x 71.19093pt.
+
+<figures/cpmg.png, id=55, 1317.42188pt x 225.09094pt>
+File: figures/cpmg.png Graphic file (type png)
+ <use figures/cpmg.png>
+Package pdftex.def Info: figures/cpmg.png used on input line 254.
+(pdftex.def)             Requested size: 408.00156pt x 69.70877pt.
+
+<figures/8pi_cpmg.png, id=56, 1314.41063pt x 34.62938pt>
+File: figures/8pi_cpmg.png Graphic file (type png)
+
+<use figures/8pi_cpmg.png>
+Package pdftex.def Info: figures/8pi_cpmg.png used on input line 256.
+(pdftex.def)             Requested size: 408.00156pt x 10.74872pt.
+
+<figures/lineshape_vs_drive.png, id=57, 294.34969pt x 216.81pt>
+File: figures/lineshape_vs_drive.png Graphic file (type png)
+
+<use figures/lineshape_vs_drive.png>
+Package pdftex.def Info: figures/lineshape_vs_drive.png used on input line 258.
+
+(pdftex.def)             Requested size: 229.49844pt x 169.04494pt.
+
+<figures/lineshape_vs_odf.png, id=58, 294.34969pt x 216.81pt>
+File: figures/lineshape_vs_odf.png Graphic file (type png)
+
+<use figures/lineshape_vs_odf.png>
+Package pdftex.def Info: figures/lineshape_vs_odf.png used on input line 260.
+(pdftex.def)             Requested size: 229.49844pt x 169.04494pt.
+
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+[3 <./figures/dephasing.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 278.
+
+[4 <./figures/cpmg.png> <./figures/8pi_cpmg.png> <./figures/lineshape_vs_drive.
+png> <./figures/lineshape_vs_odf.png>]
+<figures/sense_lim.png, id=70, 403.5075pt x 276.03125pt>
+File: figures/sense_lim.png Graphic file (type png)
+
+<use figures/sense_lim.png>
+Package pdftex.def Info: figures/sense_lim.png used on input line 286.
+(pdftex.def)             Requested size: 229.49844pt x 156.99406pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--289
+\OT1/cmr/m/n/10 The signal-to-noise for a sin-gle ex-per-i-ment is
+ []
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 283--289
+\OT1/cmr/m/n/10 given by $\OML/cmm/m/it/10 S=N \OT1/cmr/m/n/10 = \OML/cmm/m/it/
+10 []=[]$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 283--289
+\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )\OML/c
+mm/m/it/10 = []$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []$\OT1/cmr/m/n/10 .
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(force_sensing_vers2.bbl
+Underfull \hbox (badness 2856) in paragraph at lines 75--83
+ []\OT1/cmr/m/n/9 D. J. Wil-son, V. Sud-hir, N. Piro, R. Schilling,
+ []
+
+[5 <./figures/sense_lim.png>]
+Underfull \hbox (badness 1158) in paragraph at lines 206--214
+ \OT1/cmr/m/n/9 J. P. Davis, Na-ture Com-mu-ni-ca-tions \OT1/cmr/bx/n/9 7\OT1/c
+mr/m/n/9 , 25 (2016),
+ []
+
+) [6] (force_sensing_vers2.aux) ) 
+Here is how much of TeX's memory you used:
+ 5524 strings out of 493333
+ 79612 string characters out of 3139167
+ 192762 words of memory out of 3000000
+ 8989 multiletter control sequences out of 15000+200000
+ 7926 words of font info for 29 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,10n,49p,1577b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmti9.pfb>
+Output written on force_sensing_vers2.pdf (6 pages, 549879 bytes).
+PDF statistics:
+ 142 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,8 @@
+//Do standard cooling procedure.
+inline a_nopulse(10);
+
+inline a_bdrd_pulse( cooling_bdrdt );
+inline a_rd_pulse( cooling_rdt );
+pulse repump_block off;
+inline a_nopulse(2);
+

@@ -1,0 +1,385 @@
+
+
+// initialize the cards and card branches that are not used
+// NOTE: this is not needed if not using branching
+////////////////////////////////////////////////
+// wvfcdef(NoWvf10,1,0)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf11,1,1)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf12,1,2)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf13,1,3)
+// 	[1] 0,0,0,0;
+// wvfend
+//
+// wvfcdef(NoWvf30,3,0)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf31,3,1)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf32,3,2)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf33,3,3)
+// 	[1] 0,0,0,0;
+// wvfend
+//
+// wvfcdef(NoWvf40,4,0)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf41,4,1)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf42,4,2)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf43,4,3)
+// 	[1] 0,0,0,0;
+// wvfend
+//
+// wvfcdef(NoWvf50,5,0)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf51,5,1)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf52,5,2)
+// 	[1] 0,0,0,0;
+// wvfend
+// wvfcdef(NoWvf53,5,3)
+// 	[1] 0,0,0,0;
+// wvfend
+//
+// wvf(NoWvf10);
+// //wvf(NoWvf11);
+// wvf(NoWvf12);
+// wvf(NoWvf13);
+//
+// wvf(NoWvf30);
+// wvf(NoWvf31);
+// //wvf(NoWvf32);
+// wvf(NoWvf33);
+//
+// wvf(NoWvf40);
+// wvf(NoWvf41);
+// //wvf(NoWvf42);
+// wvf(NoWvf43);
+//
+// wvf(NoWvf50);
+// wvf(NoWvf51);
+// wvf(NoWvf52);
+// //wvf(NoWvf53);
+
+// @inline pdq_wfm_reset()
+// 	wvf(NoWvf10);
+// 	wvf(NoWvf11);
+// 	wvf(NoWvf12);
+// 	wvf(NoWvf13);
+//
+// 	wvf(NoWvf30);
+// 	wvf(NoWvf31);
+// 	wvf(NoWvf32);
+// 	wvf(NoWvf33);
+//
+// 	wvf(NoWvf40);
+// 	wvf(NoWvf41);
+// 	wvf(NoWvf42);
+// 	wvf(NoWvf43);
+//
+// 	wvf(NoWvf50);
+// 	wvf(NoWvf51);
+// 	wvf(NoWvf52);
+// 	wvf(NoWvf53);
+//
+// @end
+//some simple static waveforms
+wvfcdef(pdq_wfm_static_bd, pdq_chno_bd, 0)
+ 	[1] 0,0,0,0;
+ 	[1] 0,0,0,0;
+wvfend
+wvfcdef(pdq_wfm_static_odf_upper, pdq_chno_odf_upper, 0)
+ 	[1] 0,0,0,0;
+ 	[1] 0,0,0,0;
+wvfend
+wvfcdef(pdq_wfm_static_odf_lower, pdq_chno_odf_lower, 0)
+ 	[1] 0,0,0,0;
+  	[1] 0,0,0,0;
+wvfend
+wvfcdef(pdq_wfm_static_vdi, pdq_chno_vdi, 0)
+ 	[1] 0,0,0,0;
+  	[1] 0,0,0,0;
+wvfend
+
+// 	@inline pdq_trigb_alloff()
+// 		//pulse off pdq_trigb0;
+// 		pulse nopulse 2.0; var t=t+TT(2.0);
+// 		pulse pdq_trigb1 off ;
+// 		pulse pdq_trigb2 off ;
+// 		pulse pdq_trigb3 off ;
+// 		pulse pdq_trigb4 off ;
+// 		pulse pdq_trigb5 off ;
+// 		pulse pdq_trigb6 off ;
+// 		pulse pdq_trigb7 off ;
+// 		pulse nopulse 2.0; var t=t+TT(2.0);
+// 	@end
+//
+// 	@inline pdq_do_branch( at )
+// 		var aat = ($at);
+// 		pulse pdq_trig pdq_trig_t;
+// 		var t=t+TT(pdq_trig_t);
+// 		pulse nopulse aat;
+// 		var t=t+TT(aat);
+// 	@end
+
+@inline pdq_send_f1( at33, af1num33 )
+	// at is desired time for pulse (do nothing to let waveform evolve)
+	// af1num is the integer corresponding to the ttl name which is to be used
+	// to deliver the F1 pulse that causes waveform advance
+	//
+	// NOTE: since variables of type 'name' can't be passed the following workaround
+	//       involving condition testing is needed
+	//
+	var aat33 = ($at33);
+	var aaf1num33 = ($af1num33);
+	@if(aaf1num33 == pdq_f1_bd_num)
+		pulse pdq_f1_bd pdq_trig_t;
+	@endif
+	@if(aaf1num33 == pdq_f1_odf_num)
+		pulse pdq_f1_odf pdq_trig_t;
+	@endif
+	@if(aaf1num33 == pdq_f1_vdi_num)
+		pulse pdq_f1_vdi pdq_trig_t;
+	@endif
+	var t=t+TT(pdq_trig_t);
+	inline a_nopulse(aat33);
+@end
+
+@inline with_pdq2_pulse_prog(ashape33, at33, ati33, v_on, v_off, pdq_wfm_name, pdq_chno)
+	// following programs waveforms for case branching is not used
+	// at is pulse length
+	// ati is duration of interpolation interval
+	// v_on is pulse amplitude when pulse is on
+	// v_off is pulse amplitude when pulse is off
+	// ashape is 123 for pulse, 12 for on and 23 for off
+
+	var aat33 = ($at33);
+	var aati33 = ($ati33);
+	var aashape33 = ($ashape33);
+
+	@if(aashape33 == 123)
+		wvf($pdq_wfm_name)#$pdq_chno:$v_off;
+		wvfc_interp(aati33,$pdq_chno,0);
+		wvf($pdq_wfm_name,to:aat33)#$pdq_chno:$v_on;
+		wvfc_interp(aati33,$pdq_chno,0);
+		wvf($pdq_wfm_name)#$pdq_chno:$v_off;
+	@endif
+
+	@if(aashape33 == 12)
+		wvf($pdq_wfm_name)#$pdq_chno:$v_off;
+		wvfc_interp(aati33,$pdq_chno,0);
+		wvf($pdq_wfm_name)#$pdq_chno:$v_on;
+	@endif
+
+ 	@if(aashape33 == 23)
+		wvf($pdq_wfm_name)#$pdq_chno:$v_on;
+		wvfc_interp(aati33,$pdq_chno,0);
+		wvf($pdq_wfm_name)#$pdq_chno:$v_off;
+	@endif
+@end
+
+@inline with_pdq2_pulse_go( ashape44, at44, ati44, af1num44 )
+
+	// this is for case where there is no PDQ branching being used
+	// ashape is 123 for pulse, 12 for on and 23 for off
+	// at is pulse length
+	// ati is duration of interpolation interval
+	// af1 is ttl for F1 to do the waveform advance
+	var aashape44 = ($ashape44);
+	var aat44 = ($at44);
+	var aati44 = ($ati44);
+	var aaf1num44 = ($af1num44);
+
+	@if(aashape44 == 123)
+		inline pdq_send_f1( pdq_trig_t, aaf1num44 );
+		inline pdq_send_f1( aati44, aaf1num44 );
+		inline pdq_send_f1( aat44, aaf1num44 );
+		inline pdq_send_f1( aati44, aaf1num44 );
+		inline pdq_send_f1( pdq_trig_t, aaf1num44 );
+	@endif
+	@if(aashape44 == 12)
+		inline pdq_send_f1( pdq_trig_t, aaf1num44 );
+		inline pdq_send_f1( aati44, aaf1num44 );
+		inline pdq_send_f1( pdq_trig_t, aaf1num44 );
+	@endif
+	@if(aashape44 == 23)
+		inline pdq_send_f1( pdq_trig_t, aaf1num44 );
+		inline pdq_send_f1( aati44, aaf1num44 );
+		inline pdq_send_f1( pdq_trig_t, aaf1num44 );
+	@endif
+@end
+
+/////////////////// BD and REPUMP //////////////
+@inline with_pdq_pulse_bd_shaped(ashape22, at22)
+	var aat22 = ($at22);
+	var aashape22 = ($ashape22);
+
+	//with_pdq2_pulse_prog(      ashape,    at,      ati,                  v_on,                   v_off,                   pdq_wfm_name,      pdq_chno)
+	inline with_pdq2_pulse_prog( aashape22, aat22,   pdq_wfm_static_bd_ti, pdq_wfm_static_bd_v_on, pdq_wfm_static_bd_v_off, pdq_wfm_static_bd, pdq_chno_bd);
+
+	//with_pdq2_pulse_go(     ashape,    at,    ati,                  pdq_f1_bdrd);
+	inline with_pdq2_pulse_go(aashape22, aat22, pdq_wfm_static_bd_ti, pdq_f1_bd_num);
+@end
+
+@inline with_pdq_pulse_bd(at45)
+	var aat45 = ($at45);
+	inline with_pdq_pulse_bd_shaped(123, aat45);
+@end
+@inline with_pdq_bd_on()
+	inline with_pdq_pulse_bd_shaped(12, 0);
+@end
+@inline with_pdq_bd_off()
+	inline with_pdq_pulse_bd_shaped(23, 0);
+@end
+
+/////////////////// VDI //////////////
+@inline with_pdq_vdi_pulse_shaped(ashape50, at50)
+	var aat50 = ($at50);
+	var aashape50 = ($ashape50);
+
+	//with_pdq2_pulse_prog(      ashape,    at,      ati,                  v_on,                   v_off,                   pdq_wfm_name,      pdq_chno)
+	inline with_pdq2_pulse_prog( aashape50, aat50,   pdq_wfm_static_vdi_ti, pdq_wfm_static_vdi_v_on, pdq_wfm_static_vdi_v_off, pdq_wfm_static_vdi, pdq_chno_vdi);
+
+	//with_pdq2_pulse_go(     ashape,    at,    ati,                  pdq_f1_bdrd);
+	inline with_pdq2_pulse_go(aashape50, aat50, pdq_wfm_static_vdi_ti, pdq_f1_vdi_num);
+@end
+
+@inline with_pdq_vdi_pulse(at51)
+	var aat51 = ($at51);
+	inline with_pdq_vdi_pulse_shaped(123, aat51);
+@end
+@inline with_pdq_vdi_on()
+	inline with_pdq_vdi_pulse_shaped(12, 0);
+@end
+@inline with_pdq_vdi_off()
+	inline with_pdq_vdi_pulse_shaped(23, 0);
+@end
+
+
+//////////////////// WALL AM /////////////////
+// rotating wall amplitude modulation
+// @inline with_pdq_wall_am_pulse_shaped(ashape9973, at99)
+// 	var aat9973 = ($at9973);
+// 	var aashape9973 = ($ashape50);
+//
+// 	//with_pdq2_pulse_prog(      ashape,    at,      ati,                  v_on,                   v_off,                   pdq_wfm_name,      pdq_chno)
+// 	inline with_pdq2_pulse_prog( aashape50, aat9973,   pdq_wfm_static_vdi_ti, pdq_wfm_static_vdi_v_on, pdq_wfm_static_vdi_v_off, pdq_wfm_static_vdi, pdq_chno_vdi);
+//
+// 	//with_pdq2_pulse_go(     ashape,    at,    ati,                  pdq_f1_bdrd);
+// 	inline with_pdq2_pulse_go(aashape50, aat9973, pdq_wfm_static_vdi_ti, pdq_f1_vdi_num);
+// @end
+// @inline with_pdq_wall_am_pulse(at51)
+// 	inline with_pdq_wall_am_pulse_shaped(123, 0);
+// @end
+// @inline with_pdq_wall_am_on(at51)
+// 	var aat51 = ($at51);
+// 	inline with_pdq_wall_am_pulse_shaped(12, aat51);
+// @end
+// @inline with_pdq_wall_am_off()
+// 	inline with_pdq_wall_am_pulse_shaped(12, 0);
+// @end
+
+/////////////////// ODF CAL //////////////////
+@inline with_pdq_pulse_odf_cal_shaped(ashape47, awhich47, at47)
+	// ashape is 123 for pulse, 12 for on and 23 for off
+	// awhich47 is 1 for lower, 2 for upper and 12 for both
+	var aat47 = ($at47);
+	var aashape47 = ($ashape47);
+	var aawhich47 = ($awhich47);
+
+	@if( aawhich47 == 12 )
+		//with_pdq2_pulse_prog(shape,    at,     ati,                       v_on,                             v_off,                          pdq_wfm_name,             pdq_chno)
+		inline with_pdq2_pulse_prog( aashape47, aat47,  pdq_wfm_static_odf_cal_ti, pdq_wfm_static_odf_cal_lower_v_on, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower, pdq_chno_odf_lower);
+		inline with_pdq2_pulse_prog( aashape47, aat47,  pdq_wfm_static_odf_cal_ti, pdq_wfm_static_odf_cal_upper_v_on, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper, pdq_chno_odf_upper);
+	@endif
+	@if( aawhich47 == 1 )
+		inline with_pdq2_pulse_prog( aashape47, aat47,  pdq_wfm_static_odf_cal_ti, pdq_wfm_static_odf_cal_lower_v_on, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower, pdq_chno_odf_lower);
+		inline with_pdq2_pulse_prog( aashape47, aat47,  pdq_wfm_static_odf_cal_ti, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper, pdq_chno_odf_upper);
+	@endif
+	@if( aawhich47 == 2 )
+		inline with_pdq2_pulse_prog( aashape47, aat47,  pdq_wfm_static_odf_cal_ti, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower, pdq_chno_odf_lower);
+		inline with_pdq2_pulse_prog( aashape47, aat47,  pdq_wfm_static_odf_cal_ti, pdq_wfm_static_odf_cal_upper_v_on, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper, pdq_chno_odf_upper);
+	@endif
+
+	//with_pdq2_pulse_go( shape, at,     ati,  af1)
+	inline with_pdq2_pulse_go(aashape47, aat47, pdq_wfm_static_odf_cal_ti, pdq_f1_odf_num);
+@end
+@inline with_pdq_pulse_odf_cal(at61)
+	var aat61 = ($at61);
+	inline with_pdq_pulse_odf_cal_shaped(123, 12, aat61);
+@end
+@inline with_pdq_pulse_odf_cal_lower(at62)
+	var aat62 = ($at62);
+	inline with_pdq_pulse_odf_cal_shaped(123, 1, aat62);
+@end
+@inline with_pdq_pulse_odf_cal_upper(at63)
+	var aat63 = ($at63);
+	inline with_pdq_pulse_odf_cal_shaped(123, 2, aat63);
+@end
+@inline with_pdq_odf_cal_lower_on()
+	inline with_pdq_pulse_odf_cal_shaped(12, 1, 0);
+@end
+@inline with_pdq_odf_cal_lower_off()
+	inline with_pdq_pulse_odf_cal_shaped(23, 1, 0);
+@end
+@inline with_pdq_odf_cal_upper_on()
+	inline with_pdq_pulse_odf_cal_shaped(12, 2, 0);
+@end
+@inline with_pdq_odf_cal_upper_off()
+	inline with_pdq_pulse_odf_cal_shaped(23, 2, 0);
+@end
+
+// /////////////////// ODF //////////////////
+
+@inline with_pdq_pulse_odf_shaped(ashape48, awhich48, at48)
+	// ashape is 123 for pulse, 12 for on and 23 for off
+	// awhich48 is 1 for lower, 2 for upper and 12 for both
+	var aat48 = ($at48);
+	var aashape48 = ($ashape48);
+	var aawhich48 = ($awhich48);
+
+	@if( aawhich48 == 12 )
+		//with_pdq2_pulse_prog(shape,    at,     ati,                       v_on,                             v_off,                          pdq_wfm_name,             pdq_chno)
+		inline with_pdq2_pulse_prog( aashape48, aat48,  pdq_wfm_static_odf_ti, pdq_wfm_static_odf_lower_v_on, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower, pdq_chno_odf_lower);
+		inline with_pdq2_pulse_prog( aashape48, aat48,  pdq_wfm_static_odf_ti, pdq_wfm_static_odf_upper_v_on, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper, pdq_chno_odf_upper);
+	@endif
+	@if( aawhich48 == 1 )
+		inline with_pdq2_pulse_prog( aashape48, aat48,  pdq_wfm_static_odf_ti, pdq_wfm_static_odf_lower_v_on, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower, pdq_chno_odf_lower);
+		inline with_pdq2_pulse_prog( aashape48, aat48,  pdq_wfm_static_odf_ti, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper, pdq_chno_odf_upper);
+	@endif
+	@if( aawhich48 == 2 )
+		inline with_pdq2_pulse_prog( aashape48, aat48,  pdq_wfm_static_odf_ti, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower_v_off, pdq_wfm_static_odf_lower, pdq_chno_odf_lower);
+		inline with_pdq2_pulse_prog( aashape48, aat48,  pdq_wfm_static_odf_ti, pdq_wfm_static_odf_upper_v_on, pdq_wfm_static_odf_upper_v_off, pdq_wfm_static_odf_upper, pdq_chno_odf_upper);
+	@endif
+
+	//with_pdq2_pulse_go( shape, at,     ati,  af1)
+	inline with_pdq2_pulse_go(aashape48, aat48, pdq_wfm_static_odf_ti, pdq_f1_odf_num);
+@end
+
+@inline with_pdq_odf_pulse(at65)
+	//The ODF pulse toggles a pair of DAC board with waveforms defined for the same branch
+	//The LB1005 Servo track and hold should be off. And its interal offset should be set off.
+	//The 210 MHz AO switches should be locked on.
+	var aat65 = ($at65);
+	inline with_pdq_pulse_odf_shaped(123, 12, aat65);
+@end
+@inline with_pdq_odf_on()
+	inline with_pdq_pulse_odf_shaped(12, 12, 0);
+@end
+@inline with_pdq_odf_off()
+	inline with_pdq_pulse_odf_shaped(23, 12, 0);
+@end

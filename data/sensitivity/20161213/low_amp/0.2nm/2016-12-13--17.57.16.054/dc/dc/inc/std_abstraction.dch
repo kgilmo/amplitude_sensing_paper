@@ -1,0 +1,672 @@
+// generate high level functions that indicate intentions... implimentations are lower level
+// decisions about which implementation to use is made at interpet time (not runtime)
+
+//@phasetrack
+
+////////////// GENERAL PURPOSE ///////
+@inline a_nopulse(ttime)
+	pulse nopulse ($ttime);
+	var t=t+TT(($ttime));
+@end
+@inline a_exp_first_pulse( )
+	// This variable is being used to keep track of the total time for an experiment.
+	var t=0;
+	pulse nopulse 1.0;
+	var t = t+TT(1.0);
+	@if( pdq_wfm_sw_bd == 1 )
+		inline a_bdrd_off();
+	@endif
+	// is first pulse
+	pulse expStart 10;
+	//TT() calculates true time given FPGA time-steps; defined in pulse language
+	var t=t+TT(10);
+@end
+/////////// WALL AM //////////
+// @inline a_wall_am_on( at9971 )
+// 	var aat9971 = ($at9971); %ramp time
+// 	inline with_pdq_wall_am_on( aat9971 );
+// @end
+// @inline a_wall_am_off( at9972 )
+// 	var aat9972 = ($at9972); %ramp time
+// 	inline with_pdq_wall_am_on( aat9971 );
+// @end
+
+/////////////////  COOLING & STATE PREP LASERS  ////////////////
+@inline a_bd_on( )
+	@if( pdq_wfm_sw_bd == 0 )
+		pulse bd on;
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )
+		pulse bd on;
+		inline with_pdq_bd_on();
+	@endif
+@end
+@inline a_bd_off()
+	@if( pdq_wfm_sw_bd == 0 )
+		pulse bd off;
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )
+		inline with_pdq_bd_off();
+		pulse bd off;
+	@endif
+@end
+@inline a_bd_pulse( at9956 )
+	var aat9956 = ($at9956);
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse bd aat9956;
+		var t=t+TT(aat9956);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+ 		pulse bd on;
+		inline with_pdq_pulse_bd(aat9956);
+ 		pulse bd off;
+	@endif
+@end
+@inline a_rd_pulse( at9957 )
+	var aat9957 = ($at9957);
+	pulse rd aat9957;
+	var t=t+TT(aat9957);
+@end
+
+@inline a_bdrd_pulse( at9958 )
+	var aat9958 = ($at9958);
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse bdrd aat9958;
+		var t=t+TT(aat9958);
+	@endif
+ 	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+ 		pulse bdrd on;
+		inline with_pdq_pulse_bd(aat9958);
+ 		pulse bdrd off;
+ 	@endif
+@end
+
+@inline a_bdrd_on()
+	@if( pdq_wfm_sw_bd == 0 )
+		pulse bdrd on;
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )
+		pulse bdrd on;
+		inline with_pdq_bd_on();
+	@endif
+@end
+@inline a_bdrd_off()
+	@if( pdq_wfm_sw_bd == 0 )
+		pulse bdrd off;
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )
+		inline with_pdq_bd_off();
+		pulse bdrd off;
+	@endif
+@end
+
+//////////////// DETECTION /////////////
+
+@inline a_detect_quantar_mark_pre_detect()
+block repeat(5)
+{
+	pulse quantar_sync 10.0;
+	pulse nopulse 10.0;
+}
+@end
+
+//a_detect_topview_quantar() is legacy as of 5/19/2015
+@inline a_detect_topview_quantar( at9974, atq9975 )
+	var aat9974 = ($at9974);
+	var aatq9975 = ($atq9975);
+	//FIRST, USE PMT
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse det11 aat9974;
+		var t=t+TT(aat9974);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse det11 on;
+		//pulse det11 1000;
+		inline with_pdq_pulse_bd(aat9974);
+		pulse det11 off;
+		var t=t+TT(aat9974);
+	@endif
+	//NEXT, USE QUANTAR
+	pulse qdetPost on;
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse bd aatq9975;
+		var t=t+TT(aatq9975);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse bd on;
+		//pulse det11 1000;
+		inline with_pdq_pulse_bd(aatq9975);
+		pulse bd off;
+		var t=t+TT(aatq9975);
+	@endif
+	pulse qdetPost off;
+@end
+
+@inline a_detect_sideview_pmt( at9959 )
+	var aat9959 = ($at9959);
+	pulse qdetPost on;
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse det11 aat9959;
+		var t=t+TT(aat9959);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse det11 on;
+		//pulse det11 1000;
+		inline with_pdq_pulse_bd(aat9959);
+		pulse det11 off;
+		var t=t+TT(aat9959);
+	@endif
+	pulse qdetPost off;
+@end
+
+@inline a_detect_sideview_pmt_long( at9973 )
+	var aat9973 = (($at9973)/7.0);
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse det11 aat9973;
+		pulse det12 aat9973;
+		pulse det13 aat9973;
+		pulse det14 aat9973;
+		pulse det15 aat9973;
+		pulse det16 aat9973;
+		pulse det17 aat9973;
+		var t=t+TT(7*aat9973);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse det11 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det11 off;
+
+		pulse det12 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det12 off;
+
+		pulse det13 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det13 off;
+
+		pulse det14 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det14 off;
+
+		pulse det15 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det15 off;
+
+		pulse det16 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det16 off;
+
+		pulse det17 on;
+		inline with_pdq_pulse_bd(aat9973);
+		pulse det17 off;
+		var t=t+TT(7*aat9973);
+	@endif
+@end
+
+@inline a_detect_sideview_pmt( at9959 )
+	var aat9959 = ($at9959);
+	pulse qdetPost on;
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse det11 aat9959;
+		var t=t+TT(aat9959);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse det11 on;
+		//pulse det11 1000;
+		inline with_pdq_pulse_bd(aat9959);
+		pulse det11 off;
+		var t=t+TT(aat9959);
+	@endif
+	pulse qdetPost off;
+@end
+
+@inline a_detect_sideview_pmt_long_pmt123( at9976 )
+	var aat9976 = (($at9976)/3);
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse det11 aat9976;
+		pulse det12 aat9976;
+		pulse det13 aat9976;
+		var t=t+TT(3*aat9976);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse det11 on;
+		inline with_pdq_pulse_bd(aat9976);
+		pulse det11 off;
+
+		pulse det12 on;
+		inline with_pdq_pulse_bd(aat9976);
+		pulse det12 off;
+
+		pulse det13 on;
+		inline with_pdq_pulse_bd(aat9976);
+		pulse det13 off;
+
+		var t=t+TT(7*aat9976);
+	@endif
+@end
+
+@inline a_detect_sideview_pmt_long_pmt4567( at9977 )
+	var aat9977 = (($at9977)/4);
+	@if( pdq_wfm_sw_bd == 0 )  //no PDQ, pulse with RF switch only
+		pulse det14 aat9977;
+		pulse det15 aat9977;
+		pulse det16 aat9977;
+		pulse det17 aat9977;
+		var t=t+TT(7*aat9977);
+	@endif
+	@if( pdq_wfm_sw_bd == 1 )  //use PDQ for pulse shaping
+		pulse det14 on;
+		inline with_pdq_pulse_bd(aat9977);
+		pulse det14 off;
+
+		pulse det15 on;
+		inline with_pdq_pulse_bd(aat9977);
+		pulse det15 off;
+
+		pulse det16 on;
+		inline with_pdq_pulse_bd(aat9977);
+		pulse det16 off;
+
+		pulse det17 on;
+		inline with_pdq_pulse_bd(aat9977);
+		pulse det17 off;
+
+		var t=t+TT(4*aat9977);
+	@endif
+@end
+
+/////////////////ODF LASERS//////////////////
+//// ODF CAL /////
+@inline a_odf_cal_pulse( af9978, at9978, aphi9978 )
+	//af in MHz
+	var aaf9978 = ($af9978);
+	var aat9978 = ($at9978);
+	var aaphi9978 = ($aphi9978);
+	inline a_odf_dds_set( aaf9978, aaphi9978 );
+	//apply ODF pulse
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfBoth aat9978;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline a_odf_rfsw_on();
+		inline with_pdq_pulse_odf_cal(aat9978);
+		inline a_odf_rfsw_off();
+	@endif
+@end
+
+@inline a_odf_cal_upper_on()
+	@if( pdq_wfm_sw_odf == 0 )  //no PDQ pulse shaping -- usual
+		pulse swOdfUpper on;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 ) // PDQ pulse shaping
+		pulse swOdfUpper on;
+		inline with_pdq_odf_cal_upper_on();
+	@endif
+@end
+@inline a_odf_cal_upper_off()
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfUpper off;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline with_pdq_odf_cal_upper_off();
+		pulse swOdfUpper off;
+	@endif
+@end
+@inline a_odf_cal_lower_on()
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfLower on;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		pulse swOdfLower on;
+		inline with_pdq_odf_cal_lower_on();
+	@endif
+@end
+@inline a_odf_cal_lower_off()
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfLower off;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline with_pdq_odf_cal_lower_off();
+		pulse swOdfLower off;
+	@endif
+@end
+//// ODF /////
+@inline a_odf_rfsw_on()
+	pulse swOdfBoth on;
+	//inline a_nopulse(10);
+	//var t=t+TT(10);
+@end
+@inline a_odf_rfsw_off()
+	pulse swOdfBoth off;
+	//inline a_nopulse(10);
+	//var t=t+TT(10);
+@end
+@inline a_odf_dds_set( af9960, aphi9960 )
+	//af in MHz
+	var aaf9960 = ($af9960);
+	var aaf9960 = raman_f210 + aaf9960/2.0;
+	var aaphi9960 = ($aphi9960);
+	inline setddsf(ddsram, raman_f210,aaphi9960/2.0);
+	inline setddsf(ddsramdf,aaf9960,0);
+@end
+@inline a_odf_on_ddsset(af9961, aphi9961)
+	var aaf9961 = ($af9961);
+	var aaphi9961 = ($aphi9961);
+	inline a_odf_dds_set( aaf9961, aaphi9961 );
+	inline a_odf_on_ddsnoset();
+@end
+@inline a_odf_on()
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfBoth on;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline a_odf_rfsw_on();
+		inline with_pdq_odf_on();
+	@endif
+@end
+@inline a_odf_off()
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfBoth off;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline with_pdq_odf_off();
+		inline a_odf_rfsw_off();
+	@endif
+@end
+@inline a_odf_pulse( af9962, at9962, aphi9962 )
+	//af in MHz
+	var aaf9962 = ($af9962);
+	var aat9962 = ($at9962);
+	var aaphi9962 = ($aphi9962);
+	inline a_odf_dds_set( aaf9962, aaphi9962 );
+	//apply ODF pulse
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfBoth aat9962;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline a_odf_rfsw_on();
+		inline with_pdq_odf_pulse(aat9962);
+		inline a_odf_rfsw_off();
+	@endif
+@end
+@inline a_upper_odf_pulse( af9962, at9962, aphi9962 )
+	//af in MHz
+	var aaf9962 = ($af9962);
+	var aat9962 = ($at9962);
+	var aaphi9962 = ($aphi9962);
+	inline a_odf_dds_set( aaf9962, aaphi9962 );
+	//apply ODF pulse
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfUpper aat9962;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline a_odf_rfsw_on();
+		inline with_pdq_odf_pulse(aat9962);
+		inline a_odf_rfsw_off();
+	@endif
+@end
+@inline a_lower_odf_pulse( af9962, at9962, aphi9962 )
+	//af in MHz
+	var aaf9962 = ($af9962);
+	var aat9962 = ($at9962);
+	var aaphi9962 = ($aphi9962);
+	inline a_odf_dds_set( aaf9962, aaphi9962 );
+	//apply ODF pulse
+	@if( pdq_wfm_sw_odf == 0 )
+		pulse swOdfLower aat9962;
+	@endif
+	@if( pdq_wfm_sw_odf == 1 )
+		inline a_odf_rfsw_on();
+		inline with_pdq_odf_pulse(aat9962);
+		inline a_odf_rfsw_off();
+	@endif
+@end
+@inline a_odf_pulse_comdf( af9963, at9963, aphi9963 )
+	//af in MHz, IP raman_fz is in kHz
+	var aat9963 = ($at9963);
+	var aaphi9963 = ($aphi9963);
+	var aaf9963 = raman_fz/1000.0 + ($af9963);
+	inline a_odf_pulse( aaf9963, aat9963, aaphi9963);
+@end
+
+
+
+//// ODF PHASE LOCK/////
+@inline a_odf_phase_lock_integrator_off()
+	pulse odfPhaseLockIntegratorOff off;
+@end
+@inline a_odf_phase_lock_integrator_on()
+	pulse odfPhaseLockIntegratorOff on;
+@end
+@inline a_odf_phase_lock_acquire_pulse(at)
+	var aat = ($at);
+	//set reference DDS for ODF beat note
+	inline a_bd_on( );
+	inline setddsf(ddsOdfBeatnote,raman_fz/1000.0,0);
+	//set ODF DDSs
+	inline a_odf_dds_set(raman_fz/1000.0,0);
+	inline a_odf_on();
+	inline a_odf_phase_lock_integrator_on();
+	inline a_nopulse(aat);
+	inline a_odf_phase_lock_integrator_off();
+	inline a_odf_off();
+	inline a_bd_off( );
+@end
+
+@inline a_odf_phase_lock_gate_diagnostic()
+	inline a_odf_on();
+	inline a_nopulse(10);
+	pulse odfPhaseLockGatePhaseDiagnosticBox on;
+	inline a_nopulse(10);
+	pulse odfPhaseLockGatePhaseDiagnosticBox off;
+	inline a_nopulse(10);
+	inline a_odf_off();
+@end
+@inline a_odf_phase_lock_gate_diagnostic_off()
+
+@end
+///////////////// CLASSICAL DRIVES ///////////////
+@inline a_parametric_pulse( af9964, at9964, aphi9964 )
+	var aaf9964 = ($af9964);
+	var aat9964 = ($at9964);
+	var aaphi9964 = ($aphi9964);
+	inline setddsf(ddsParametric, aaf9964, aaphi9964);
+	pulse swParametric aat9964;
+	var t=t+TT(aat9964);
+@end
+@inline a_parametric_pulse_at2fcom( at9965, aphi9965 )
+	var aat9965 = ($at9965);
+	var aaphi9965 = ($aphi9965);
+	var aaf9965 = 2*raman_fz/1000.0;
+	inline a_parametric_pulse( aaf9965, aat9965, aaphi9965 );
+@end
+@inline a_tickle_pulse( af9966, at9966, aphi9966 )
+	var aaf9966 = ($af9966);
+	var aat9966 = ($at9966);
+	var aaphi9966 = ($aphi9966);
+	inline setddsf(ddstickle, aaf9966, aaphi9966);
+	pulse swtickle aat9966;
+	var t=t+TT(aat9966);
+@end
+@inline a_tickle_pulse_atfcom( at9967, aphi9967 )
+	var aat9967 = ($at9967);
+	var aaphi9967 = ($aphi9967);
+	var aaf9967 = raman_fz/1000.0; //af in MHz
+	inline a_tickle_pulse( aaf9967, aat9967, aaphi9967 );
+@end
+@inline a_cyclotron_pulse( af9967, at9967, aphi9967 )
+	var aaf9967 = ($af9967);
+	var aat9967 = ($at9967);
+	var aaphi9967 = ($aphi9967);
+	inline setddsf(ddsnukesf, aaf9967, aaphi9967);
+	pulse ttl10 aat9967;
+	var t=t+TT(aat9967);
+@end
+
+//////////////// SPIN FLIP ////////////////////
+@inline a_sf_pulse(af57,at57,aphi57)
+	var aaf57 = ($af57);
+	var aat57 = ($at57);
+	var aaphi57 = ($aphi57);
+	inline sf_pulse(aaf57,aat57,aaphi57);
+@end
+@inline a_sf_pulse_f0( at9968, aphi9968)
+	 var aat9968 = ($at9968);
+	 var aaphi9968 = ($aphi9968);
+	 inline sf_pulse(sf_f0,aat9968,aaphi9968);
+@end
+@inline a_sf_on(af58,aphi58)
+	var aaf58 = ($af58);
+	var aaphi58 = ($aphi58);
+	inline sf_dds_pre(aaf58,aaphi58);
+	inline sf_sw_on();
+	inline with_pdq_vdi_on();
+@end
+@inline a_sf_on_f0(aphi58)
+	var aaphi58 = ($aphi58);
+	inline a_sf_on(sf_f0,aaphi58);
+@end
+@inline a_sf_off()
+	inline with_pdq_vdi_off();
+	inline sf_sw_off();
+	inline sf_dds_post(sf_f0,0);
+@end
+@inline a_sfPulse_f0(at9968, aphi9968)
+	var aat9968 = ($at9968);
+	var aaphi9968 = ($aphi9968);
+	inline sf_pulse(sf_f0,aat9968,aaphi9968);
+@end
+@inline a_sfPulse(af57,at57,aphi57)
+	var aaf57 = ($af57);
+	var aat57 = ($at57);
+	var aaphi57 = ($aphi57);
+	inline sf_pulse(aaf57,aat57,aaphi57);
+@end
+///////////////// WAVEPLATES //////////////////
+@inline a_odf_lower_wp_set_angle( aangle9970 )
+	var aa9970 = $aangle9970;
+	%driver apt move_absolute wpl `aa9970`;
+	%driverwait apt;
+	%pause 0.2;
+@end
+@inline a_odf_upper_wp_set_angle( aangle9971 )
+	var aa9971 = $aangle9971;
+	%driver apt move_absolute wpu `aa9971`;
+	%driverwait apt;
+	%pause 0.2;
+@end
+
+////////////// transverse field ODF ///////////
+@inline a_set_transverse_rabi( arabi9972 )
+	var ar9972 = $arabi9972;
+	var av9972 = 1/8.99*(0.409-20*ln(f/6.34)/ln(10));
+	%driver kpdq2_uWave set_v_const `ar9972`;
+@end
+
+@inline a_transY_odf_pulse( af9973, at9973, aphi9973 )
+	//af in MHz
+	var aaf9973 = ($af9973);
+	var aat9973 = ($at9973);
+	var aaphi9973 = ($aphi9973);
+	inline sf_dds_pre(sf_f0,0.0);
+	inline a_odf_dds_set( aaf9973, aaphi9973 );
+	//apply ODF pulse
+	pulse swOdft aat9973;
+	inline a_nopulse(15);
+@end
+
+@inline a_transX_odf_pulse( af9974, at9974, aphi9974 )
+	//af in MHz
+	var aaf9974 = ($af9974);
+	var aat9974 = ($at9974);
+	var aaphi9974 = ($aphi9974);
+	inline sf_dds_pre(sf_f0,3*Pi/2.0);
+	inline a_odf_dds_set( aaf9974, aaphi9974 );
+	//apply ODF pulse
+	pulse swOdft aat9974;
+	inline a_nopulse(15);
+@end
+
+@inline a_transX_ramp_odf_pulse( af9975, at9975, aphi9975 )
+	//apply ramping uWave pulse simultaneous with ODF
+	//af in MHz
+	var aaf9975 = ($af9975);
+	var aat9975 = ($at9975);
+	var aaphi9975 = ($aphi9975);
+	inline sf_dds_pre(sf_f0,Pi/2.0);
+	inline a_odf_dds_set( aaf9975, aaphi9975 );
+	pulse pdqTrig 1; //trigger pdq ramp
+	//apply ODF pulse
+	pulse swOdft aat9975;
+	pulse pdqTrig 1; //trigger pdq return to intial state
+@end
+
+@inline a_transX_ramp_W1_pulse( af9975, at9975, aphi9975 )
+	//apply ramping uWave pulse simultaneous with ODF W1 sequence
+	//af in MHz
+	var aaf9975 = ($af9975);
+	var aat9975 = ($at9975);
+	var aaphi9975 = ($aphi9975);
+	var aaphishift9975 = ($aphi9975)+Pi;
+	inline sf_dds_pre(sf_f0,Pi/2.0);
+	inline a_odf_dds_set( aaf9975, aaphi9975 );
+	pulse pdqTrig 1; //trigger pdq ramp
+	//apply ODF pulse
+	pulse swOdft aat9975;
+	//inline a_odf_dds_set( aaf9975, aaphishift9975 );
+	//pulse swOdft aat9975; 
+	//pulse pdqTrig 1; //trigger pdq return to intial state
+	inline a_nopulse(15);
+@end
+
+//////////////// replacements for standard include //////////////////
+@inline std_cooling()
+	inline a_bdrd_pulse( cooling_bdrdt );
+	inline a_rd_pulse( cooling_rdt );
+@end
+
+/////////////// Carrier Flopping ( with pulse delay compensation) /////////
+@inline a_carrier_pulse(af59,at59,aphi59)
+	var af59 = $af59;
+	var at59 = $at59;
+	var aphi59 = $aphi59;
+	var delay_diff = (carrier1_delay - carrier2_delay);
+	inline setddsf(dds7,300.0+af59/8.0,aphi59);
+	// @if( delay_diff >> 0 )
+		// pulse swcarrier1 on;
+		// pulse wait delay_diff;
+		// pulse swcarrier2 on;
+		// pulse wait at59;
+		// pulse swcarrier1 off;
+		// pulse wait delay_diff;
+		// pulse swcarrier2 off;
+	// @endif
+	// @if( delay_diff << 0 )
+		// pulse swcarrier2 on;
+		// pulse wait (-1.*delay_diff);
+		// pulse swcarrier1 on;
+		// pulse wait at59;
+		// pulse swcarrier2 off;
+		// pulse wait (-1.*delay_diff);
+		// pulse swcarrier1 off;
+	// @endif
+	// @if( delay_diff == 0 )
+		// pulse swcarrierboth on;
+		// pulse wait at59;
+		// pulse swcarrierboth off;
+	// @endif
+	pulse swcarrier2 on;
+	pulse wait (-1.*delay_diff);
+	pulse swcarrier1 on;
+	pulse wait at59;
+	pulse swcarrier2 off;
+	pulse wait (-1.*delay_diff);
+	pulse swcarrier1 off;
+	pulse wait (-2.*delay_diff);
+@end
+
+@inline a_carrier_pulse_f0(at60,aphi60)
+	var at60 = $at60;
+	var aphi60 = $aphi60;
+	inline a_carrier_pulse(carrier_fit_f0,at60,aphi60);
+@end

@@ -1,0 +1,198 @@
+// Useful stuff
+var pi = Pi;
+var deg = 2*pi/360;
+
+// Name for do nothing pulse
+name wait = none;
+name nopulse = none;
+
+// Names for TTL lines
+name ttl0 = 0;
+name ttl1 = 1;
+name ttl2 = 2;
+name ttl3 = 3;
+name ttl4 = 4;
+name ttl5 = 5;
+name ttl6 = 6;
+name ttl7 = 7;
+name ttl8 = 8;
+name ttl9 = 9;
+name ttl10 = 10;
+name ttl11 = 11;
+name ttl12 = 12;
+name ttl13 = 13;
+name ttl14 = 14;
+name ttl15 = 15;
+
+// Names for triggers
+name pdqTrig = ttl11;  //for triggering PDQ sequences
+
+// Names for other switches
+name andortrig = 4;  //for using Andor's external trig mode
+
+// Names for laser switches
+name swbd = ttl1; // cooling AO TTL switch
+name swrd = ttl2; // repump AO TTL switch
+name bd = swbd;
+name rd = swrd;
+name bdrd = bd,rd;
+name swramanf = 6;         // raman RF switch for frequency f, aka lower raman
+name swramanfdf = 3;       // raman RF switch for frequency f+df, aka upper raman
+name expStart = ttl0,bdrd;        // pulse indicating start of experiment
+name expStartODFTrig = ttl0,bdrd,swramanf,swramanfdf;
+name andorpmt = ttl12;
+name odfPhaseLockIntegratorOff = ttl8; //ODF beat note phase control, hold integrator
+name repump_block = ttl8;  //for preventing repumping during detection
+
+// Names for kHz/microwave switches
+name swtickle = 15;         // tickle RF TTL switch
+name bothtickle = 13;    // tickle RF on both upper and lower endcaps
+name swParametric = bothtickle;
+//name swParametricPhase180 = 13;
+name swsf = 5;             // 124 GHz switch, TTL pulse for pin diode switch
+name swRot = 9;            // switch source of control voltage for uWave attenuator Hi = Transverse field, Low = Global Rotation
+name swOdfLower = swramanf;
+name swOdfUpper = swramanfdf;
+name swbothraman = swramanf,swramanfdf;
+name swOdfBoth = swbothraman;
+name swOdft = swramanf,swramanfdf,swsf,swRot;
+name swOdftp = swramanf,swramanfdf,swsf,swRot,pdqTrig;
+name swBdRdOdf = swbd,swrd;
+name swcarrier1 = swrd;
+name swcarrier2 = swramanf;
+name swcarrierboth = swcarrier1, swcarrier2;
+
+name swQuantar = 10; //block photons from NI ADCs
+name qdetPre = bd; //measure: crystal quality prior to experiment
+name qdetPost = bd; //measure: experiment result
+
+// Name for debug marker pulse
+name marker = 5;
+
+// Names for detection pulses
+//name det10 = pmt(0),bd,rd; //this one is broken... don't use
+name det11 = pmt(1),bd;
+name det12 = pmt(2),bd;
+name det13 = pmt(3),bd;
+name det14 = pmt(4),bd;
+name det15 = pmt(5),bd;
+name det16 = pmt(6),bd;
+name det17 = pmt(7),bd;
+
+name det20 = pmt(8),bd;
+name det20odfPhaseLock = pmt(8),swOdfBoth;
+name pmt8only = pmt(8);
+name det21 = pmt(9),bd;
+name det22 = pmt(10),bd;
+name det23 = pmt(11),bd;
+name det24 = pmt(12),bd;
+name det25 = pmt(13),bd;
+name det26 = pmt(14),bd;
+name det27 = pmt(15),bd;
+
+name det11and21 = pmt(1),pmt(9),bd;
+
+
+// Various delays
+var fpgafreq = 62.5;
+var ddsclock = fpgafreq*2;  //10121105 was 40  
+// 20141021 ddsclock refers to DDS Update rate, which is ext ref/8
+var minsetphaset = 10/ddsclock;
+var minsetfreqt = 32/ddsclock;  // 
+var minsetrft = 128/ddsclock;  // 128 works
+var minsetddst = 8/ddsclock;   // 7/14 was 4
+var minsetselt = 8/ddsclock;    // 
+var mindelayt = 8/fpgafreq;     // Generic minimal delay.
+var minblockt = 4/fpgafreq;     // Delay before ifs, repeats, etc.
+var minbetweent = 4/fpgafreq;   // Minimum delay between pulses.
+
+// var fpgafreq = 62.5;
+// var ddsclock = fpgafreq*16;  //10121105 was 40
+// var minsetphaset = 2; //16/fpgafreq;
+// var minsetfreqt = 2; //16/fpgafreq;  // was: 35
+// var minsetrft = 16/fpgafreq;
+// var minsetddst = 2; //16/fpgafreq;
+// var minsetselt = 2; //16/fpgafreq;    // was: 8
+// var mindelayt = 4/fpgafreq;     // Generic minimal delay.
+// var minblockt = 4/fpgafreq;     // Delay before ifs, repeats, etc.
+// var minbetweent = 4/fpgafreq;   // Minimum delay between pulses.
+
+var wvfstep=126./fpgafreq;
+var wvfoffs=63./fpgafreq+2.*3./fpgafreq;
+
+// Variables for DDS numbers
+var dds0 = 0x0;
+var dds1 = 0x1;
+var dds2 = 0x2;
+var dds3 = 0x3;
+var dds4 = 0x4;
+var dds5 = 0x5;
+var dds6 = 0x6;
+var dds7 = 0x7;
+var ddsOdfBeatnote = dds0;
+var ddscooling = dds1;
+var ddstickle = dds3;      //endcap tickle RF
+var ddsram = dds4;         //fixed frequency raman AO in UV (4/27/2010 210.0 MHz)
+var ddsOdfLower = ddsram;
+var ddsramdf = dds5;      //raman AO in UV + df (4/27/2010 210.0+df MHz)
+var ddsOdfUpper = ddsramdf;
+var ddssf = dds6;          //spin flip tuning frequency for 124 GHz microwaves (4/27/2010 68.0 MHz)
+var ddssfdf = dds7;        //spin flip tuning frequency for 124 GHz microwaves plus 100 kHz offset
+var ddsnukesf = dds0;      //nuclear spin flip DDS; no RF switch... just detune
+var ddsParametric = dds0;	//for classical parametric drive
+
+// Delta variables for scans
+//var ddetfreq=0;
+//var dpsb1=0;
+//var dpsb2=0;
+//var dpsb3=0;
+//var dpsr1=0;
+//var dpsr2=0;
+//var dpsr3=0;
+//var datb1=0;
+//var datb2=0;
+//var datb3=0;
+//var datr1=0;
+//var datr2=0;
+//var datr3=0;
+//var d_mmsb_sh_hor   = 0;
+//var d_mmsb_sh_ver   = 0;
+//var d_mmsb_sh_theta = 0;
+//var d_fluo_sh_hor   = 0;
+//var d_fluo_sh_ver   = 0;
+//var d_fluo_sh_theta = 0;
+
+// Names for waveform related pulses
+name wvfadv = 11;
+name _wvfadv = 11;   // For internal use by the parser.
+name wfm_adv = 11;   // advance waveform to next point; pulse goes to ni6733
+name pdq_trig = 11;  // waveform advance for the PDQ DACs
+name PDQ_trig = 11;  // another synonym for pdq_trig used in some .dc files
+// Following is while not using PDQ branching
+name pdq_f1_bd = 11;
+var pdq_f1_bd_num = 11;
+name pdq_f1_odf = 10;
+var pdq_f1_odf_num = 10;
+name pdq_f1_vdi = 14;
+var pdq_f1_vdi_num = 14;
+
+//pulse timing
+var pdq_trig_t = 1;
+var pdq_wfm_static_prepost_t = 2.0; //time before & after static pulse where voltage is clamped to zero
+//pdq_wfm_static_prepost_t >= pdq_trig_t is required
+
+// PDQ DAC channel names
+//pdq_chno_usb_offset = 8 (1...8 used for NI-6733 channels, PDQ DACs start at 9)
+var pdq_chno_bd = 1;
+var pdq_chno_rd = 2;
+var pdq_chno_odf_upper = 10;
+var pdq_chno_odf_lower = 11;
+var pdq_chno_vdi = 16;
+
+//Following is a list of numerical suffixes used to prevent variable name
+//collisions in the context of inline functions. Don't use more than once!
+// 22, 33, 44, 45, 46, 47, 48, 49,
+// 50..60,61,62,63,64,65,
+// 1212, 2323, 9945, 9955, 9956, 9957, 9958, 9959
+// 9960..9970,9971,9972,9973, 9974, 9975, 9976, 9977
+// 9978

@@ -1,0 +1,249 @@
+%% ****** Start of file apstemplate.tex ****** %
+%%
+%%
+%%   This file is part of the APS files in the REVTeX 4 distribution.
+%%   Version 4.1r of REVTeX, August 2010
+%%
+%%
+%%   Copyright (c) 2001, 2009, 2010 The American Physical Society.
+%%
+%%   See the REVTeX 4 README file for restrictions and more information.
+%%
+%
+% This is a template for producing manuscripts for use with REVTEX 4.0
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+%
+% Group addresses by affiliation; use superscriptaddress for long
+% author lists, or if there are many overlapping affiliations.
+% For Phys. Rev. appearance, change preprint to twocolumn.
+% Choose pra, prb, prc, prd, pre, prl, prstab, prstper, or rmp for journal
+%  Add 'draft' option to mark overfull boxes with black boxes
+%  Add 'showpacs' option to make PACS codes appear
+%  Add 'showkeys' option to make keywords appear
+\documentclass[aps,prl,superscriptaddress,floatfix]{revtex4-1}
+%\documentclass[aps,prl,preprint,superscriptaddress]{revtex4-1}
+%\documentclass[aps,prl,reprint,groupedaddress]{revtex4-1}
+
+% You should use BibTeX and apsrev.bst for references
+% Choosing a journal automatically selects the correct APS
+% BibTeX style file (bst file), so only uncomment the line
+% below if necessary.
+
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage{braket}
+\usepackage{mathtools}
+\usepackage{color}
+\graphicspath{{figures/}}
+\DeclareMathOperator{\sinc}{sinc}
+
+\begin{document}
+\title{Amplitude sensing with a trapped-ion mechanical oscillator - Supplementary Material}
+\author{K. A. Gilmore}
+\email[]{kevin.gilmore@colorado.edu}
+
+\affiliation{National Institute of Standards and Technology, Boulder, Colorado 80305, USA}
+\affiliation{JILA and Department of Physics, University of Colorado, Boulder, Colorado, 80309, USA}
+
+\author{J. G. Bohnet}
+\affiliation{National Institute of Standards and Technology, Boulder, Colorado 80305, USA}
+
+\author{B. C. Sawyer}
+\affiliation{Georgia Tech Research Institute, Atlanta, Georgia 30332, USA}
+
+\author{J. W. Britton}
+\affiliation{U.S. Army Research Laboratory, Adelphi, Maryland 20783, USA}
+
+\author{J. J. Bollinger}
+\affiliation{National Institute of Standards and Technology, Boulder, Colorado 80305, USA}
+\maketitle
+
+
+To model the lineshape of the signal, it is necessary to account for the accumulated phase due to the spin-dependent ODF potential without making the simplification that $ \omega = \mu $. This results in a characteristic response function for each sequence. For the $n = 8$ CPMG sequence the response function is given by:
+%\begin{widetext}
+%\begin{equation}
+%\theta_{tot} = \theta_{max} \left[ \frac{2 \sin(\frac{1}{2}[(\omega-\mu)T])}{\omega-\mu} \right] 
+%\left[ \sin(\frac{\omega}{2}(T+t_{\pi})) \right] \left[ \sin(\frac{1}{2}[\omega (T+t_{\pi}) + (\omega - \mu)T)]) \right] \left[ \cos(\omega(T+t_{\pi})+(\omega - \mu)T) \right] \left[ \cos(2(\omega(T+t_{\pi})+(\omega - \mu)T)) \right] 
+%\end{equation}
+%\end{widetext}
+
+\begin{widetext}
+\begin{equation}
+\theta_{tot} = \theta_{max} \left[ \sinc \left( \frac{T}{2} \left( \omega-\mu \right) \right) \right] 
+\left[ \cos \left( \frac{T}{2} \left( \omega - \mu \right) \right) \right] \left[ \cos(T(\omega - \mu)) \right] \left[ \cos(2T(\omega - \mu)) \right] .
+\end{equation}
+\end{widetext}
+
+\begin{widetext}
+\begin{equation}
+\theta = \frac{DWF \cdot (U/\hbar) \cdot \delta k\;Z_c}{2}  \sinc\left( \frac{T}{2} \left( \omega-\mu \right) \right) \sin\left( \frac{\omega}{2} \left( T+t_{\pi} \right) \right) \sin(\xi)\cos(2 \xi)\cos(4 \xi),
+\end{equation}
+\end{widetext}
+
+where $\xi = \frac{1}{2}\left( T(\omega - \mu) + \omega(T+t_{\pi}) \right)$. 
+
+\part*{Incoherent sensing limits}
+
+Following earlier discussions, the probability of measuring $\left|\uparrow\right\rangle $
+at the end of the Ramsey sequence is 
+\begin{equation}
+\left\langle P_{\uparrow}\right\rangle =\frac{1}{2}\left[1-e^{-\Gamma\tau}J_{0}\left(\theta_{max}\right)\right]\:,\label{eq:P_up formula}
+\end{equation}
+where $\left\langle \:\right\rangle $ denotes an average over many
+experimental trials and therefore over the random phase between the
+1D optical lattice and the classically driven COM motion, and
+\begin{equation}
+\theta_{max}=DWF\cdot\left(U/\hbar\right)\cdot\delta k\,Z_{c}\cdot\tau\:.\label{eq:theta_max formula}
+\end{equation}
+Defining $F\left(\theta_{max}^{2}\right)\equiv\left(1-J_{0}\left(\theta_{max}\right)\right)/2$
+and denoting $\left\langle P_{\uparrow}\right\rangle _{bck}=\left[1-e^{-\Gamma\tau}\right]/2$
+as the probability of measuring $\left|\uparrow\right\rangle $ at
+the end of the sequence in the absence of a classically driven motion,
+$\theta_{max}^{2}$ can be determined from a measurement of the difference
+$\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}$
+through
+\begin{equation}
+F\left(\theta_{max}^{2}\right)=e^{\Gamma\tau}\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)\:.\label{eq:P_up difference}
+\end{equation}
+The standard deviation $\delta\theta_{max}^{2}$ in estimating $\theta_{max}^{2}$
+is determined from the standard deviation $\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)$
+of the $\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}$
+difference measurements through
+\begin{equation}
+\delta\theta_{max}^{2}=\frac{e^{\Gamma\tau}\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)}{\frac{\mathrm{d}F\left(\theta_{max}^{2}\right)}{d\theta_{max}^{2}}}\:.\label{eq:delta theta^2}
+\end{equation}
+The signal-to-noise ratio of a measurement of $\theta_{max}^{2}$
+(and therefore $Z_{c}^{2}$) is then $\theta_{max}^{2}/\delta\theta_{max}^{2}$.
+In general this signal-to-noise ratio depends on $\theta_{max}^{2}$
+and the experimental parameters $U\cdot\tau$ and $\Gamma\cdot\tau$$ $.
+
+We use Eq. (\ref{eq:delta theta^2}) to theoretically estimate $\theta_{max}^{2}/\delta\theta_{max}^{2}$
+and the amplitude sensing limits. We assume the only sources of noise
+are projection noise in the measurement of the spin state and fluctuations
+in $P_{\uparrow}$ due to the random variation in the relative phase
+of the 1D optical lattice and the driven COM motion. In this case
+$\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)=\sqrt{\delta\left\langle P_{\uparrow}\right\rangle ^{2}+\delta\left\langle P_{\uparrow}\right\rangle _{bck}^{2}}$
+where the relevant variances are
+\begin{equation}
+\delta\left\langle P_{\uparrow}\right\rangle _{bck}^{2}=\frac{1}{N}\left\langle P_{\uparrow}\right\rangle _{bck}\left(1-\left\langle P_{\uparrow}\right\rangle _{bck}\right)=\frac{1}{4N}\left(1-e^{-2\Gamma\tau}\right)\label{eq:Pbck noise}
+\end{equation}
+and
+\begin{equation}
+\delta\left\langle P_{\uparrow}\right\rangle ^{2}=\sigma_{\phi}^{2}+\frac{1}{N}\left\langle P_{\uparrow}\right\rangle \left(1-\left\langle P_{\uparrow}\right\rangle \right)\:.\label{eq:Pup noise}
+\end{equation}
+Here $N$ is the number of spins. Equation (\ref{eq:Pbck noise})
+and the second term in Eq. (\ref{eq:Pup noise}) are projection noise.
+The variance 
+\begin{equation}
+\sigma_{\phi}^{2}=\left\langle P_{\uparrow}^{2}-\left\langle P_{\uparrow}\right\rangle ^{2}\right\rangle =\frac{e^{-2\Gamma\tau}}{8}\left(1+J_{0}\left(2\theta_{max}\right)-2J_{0}\left(\theta_{max}\right)^{2}\right)\label{eq:phase fluctuation variance}
+\end{equation}
+is due to the random variation in the relative phase of the 1D optical
+lattice and the driven COM motion. For our set-up, $DWF=0.86$ and
+$\delta k=2\pi/\left(900\:\mathrm{nm}\right)$ are fixed, and the
+decoherence $\Gamma$ is a function of $U$, $\Gamma=\xi\left(U/\hbar\right)$
+where $\xi=1.156\times10^{-3}$. For a given $Z_{c}$ we use Eqs.
+(\ref{eq:theta_max formula}) and (\ref{eq:delta theta^2})-(\ref{eq:phase fluctuation variance})
+to find the optimum $\theta_{max}^{2}/\delta\theta_{max}^{2}$ as
+a function of $\left(U\tau\right)/\hbar$. This optimum value is the
+theoretical curve plotted in Figure (amplitude sensing limits) of
+the main text.
+
+One can show that $\theta_{max}^{2}/\delta\theta_{max}^{2}$ is optimized
+for relatively small values of $\theta_{max}^{2}$ where $F\left(\theta_{max}^{2}\right)\approx\theta_{max}^{2}/8$
+is a good approximation. This leads to some simplifications for Eqs.
+(\ref{eq:P_up difference}) and (\ref{eq:delta theta^2}),
+\begin{equation}
+\theta_{max}^{2}\approx8e^{\Gamma\tau}\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)\label{eq:theta_max^sq}
+\end{equation}
+and
+\begin{equation}
+\delta\theta_{max}^{2}\approx8e^{\Gamma\tau}\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)\:,\label{eq:delta theta_max^2}
+\end{equation}
+and to the following estimate for the signal-to-noise ratio of a single
+measurement,
+\begin{equation}
+\frac{\theta_{max}^{2}}{\delta\theta_{max}^{2}}\approx\frac{\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}}{\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)}\:.\label{eq:S/N limits}
+\end{equation}
+Figure (amplitude sensing limits) of the main text uses Eq. (\ref{eq:S/N limits}),
+along with repeated measurements of $\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}$,
+to experimentally determine the signal-to-noise ratio as a function
+of the amplitude $Z_{c}$ of the COM motion.
+
+Finally we use Eqs. (\ref{eq:theta_max formula}) and (\ref{eq:delta theta^2})-(\ref{eq:phase fluctuation variance})
+to calculate the sensing limits for very small $Z_{c}$. For small
+$Z_{c}$ the variance $\sigma_{\phi}^{2}$ can be neglected compared
+to projection noise and $\delta\left\langle P_{\uparrow}\right\rangle ^{2}\approx\delta\left\langle P_{\uparrow}\right\rangle _{bck}^{2}$.
+In this case we obtain the following expression for the signal-to-noise
+ratio,
+\begin{equation}
+\frac{\theta_{max}^{2}}{\delta\theta_{max}^{2}}=\frac{\sqrt{N}}{4\sqrt{2}}\frac{DWF^{2}\cdot\left(\delta k\,Z_{c}\right)^{2}\left(U\tau/\hbar\right)^{2}}{\sqrt{e^{2\xi U\tau/\hbar}-1}}\:.\label{eq:limiting sensitivity}
+\end{equation}
+Equation (\ref{eq:limiting sensitivity}) is maximized for $\xi U\tau\approx1.9603$.
+With $DWF=0.86$, $\delta k=2\pi/\left(900\:\mathrm{nm}\right)$,
+$\xi=1.156\times10^{-3}$, and $N=100$,
+\begin{equation}
+\left.\frac{\theta_{max}^{2}}{\delta\theta_{max}^{2}}\right|_{optimum}=\left[\frac{Z_{c}}{0.196\:\mathrm{nm}}\right]^{2}\:.\label{eq:26.1 Z_c^2}
+\end{equation}
+For our set-up and available ODF power, $\xi U\tau/\hbar\approx1.9603$
+is realized for $\tau\approx20\:\mathrm{ms}$. A measurement of the
+signal and a measurement of the background requires $\sim60\:\mathrm{ms}$
+for $16$ independent measurements of $\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}$
+in 1 s. The limiting sensitivity is approximately $\left(100\:\mathrm{pm}\right)^{2}$
+in a 1 s measurement time, or $\left(100\:\mathrm{pm}\right)^{2}/\sqrt{\mathrm{Hz}}$.
+We note that the limiting sensitivity is determined by the ratio $\xi=\Gamma/\left(U/\hbar\right)$.
+In particular, the optimum value for Eq. (\ref{eq:limiting sensitivity})
+scales as $1/\xi^{2}$.
+
+\part*{Coherent sensing limits}
+
+With appropriate care the 1D optical lattice can be stable for long
+periods of time with respect to the ion trapping electrodes {[}Hume,
+PRL{]}, enabling phase coherent sensing of a COM motion $Z_{c}\cos(\omega t)$.
+In this case the same spin precession $\theta_{max}=DWF\cdot\left(U/\hbar\right)\cdot\delta k\,Z_{c}\cdot\tau$
+occurs for each experimental trial, which can be detected to first
+order in $\theta_{max}$ (or $Z_{c}$) in a Ramsey sequence with a
+$\pi/2$ phase shift between the two $\pi$-pulses. Assuming $\sin\left(\theta_{max}\right)\approx\theta_{max}$,
+appropriate for small amplitudes $Z_{c}$, the equivalent coherent
+sensing expressions for Eqs. (\ref{eq:theta_max^sq}) and (\ref{eq:delta theta_max^2})
+are
+\begin{equation}
+\theta_{max}=2e^{\Gamma\tau}\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)\label{eq:theta_max coherent}
+\end{equation}
+and
+\begin{equation}
+\delta\theta_{max}=2e^{\Gamma\tau}\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)\:.\label{eq:delta theta_max coherent}
+\end{equation}
+For a Ramsey experiment with a $\pi/2$ phase shift, $\left\langle P_{\uparrow}\right\rangle _{bck}=1/2$.
+If projection noise is the only source of noise, then for small $Z_{c}$,
+$\delta\left\langle P_{\uparrow}\right\rangle ^{2}\approx\delta\left\langle P_{\uparrow}\right\rangle _{bck}^{2}=\frac{1}{N}\cdot\frac{1}{2}\cdot\frac{1}{2}$
+and $\delta\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)\approx\frac{1}{\sqrt{2N}}$.
+The limiting signal-to-noise ratio $\theta_{max}/\delta\theta_{max}$
+of a $\left(\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}\right)$
+measurement is
+\begin{equation}
+\frac{\theta_{max}}{\delta\theta_{max}}=DWF\cdot\left(\delta k\,Z_{c}\right)\cdot\sqrt{\frac{N}{2}}\cdot\frac{\left(U\tau\right)}{\hbar}e^{-\xi U\tau/\hbar}\:.\label{eq:S/N coherent}
+\end{equation}
+Equation (\ref{eq:S/N coherent}) is maximized for $\xi U\tau/\hbar=1$.
+With $DWF=0.86$, $\delta k=2\pi/\left(900\:\mathrm{nm}\right)$,
+$\xi=1.156\times10^{-3}$, and $N=100$,
+\begin{equation}
+\left.\frac{\theta_{max}}{\delta\theta_{max}}\right|_{optimum}=\frac{Z_{c}}{0.074\:\mathrm{nm}}\:.\label{eq:coherent optimum}
+\end{equation}
+With $16$ independent measurements of $\left\langle P_{\uparrow}\right\rangle -\left\langle P_{\uparrow}\right\rangle _{bck}$
+in 1 s, this corresponds to a limiting sensitivity of $\sim\left(20\:\mathrm{pm}\right)/\sqrt{\mathrm{Hz}}$.
+In particular the optimum value for the signal-to-ratio of Eq. (\ref{eq:S/N coherent})
+scales as $1/\xi$. Further, by employing spin-squeezed states that
+have been demonstrated in this system {[}Bohnet, Science 2016{]},
+$\theta_{max}/\delta\theta_{max}$ can be improved by another vactor
+of 2.
+
+Employing this technique to sense motion resonance with the COM mode
+can lead to the detection of very weak forces and electric fields.
+The detection of a 20 pm amplitude resulting from a 5 ms coherent
+drive on the 1.57 MHz COM mode (corresponds to a $Q\sim10^{4}$) is
+sensitive to a force/ion of $10^{-3}\:\mathrm{yN}$ corresponding
+to an electric field of $7\:\mathrm{nV/m}$.
+\end{document}
+
+\end{document}

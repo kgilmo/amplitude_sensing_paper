@@ -1,0 +1,311 @@
+%% ****** Start of file apstemplate.tex ****** %
+%%
+%%
+%%   This file is part of the APS files in the REVTeX 4 distribution.
+%%   Version 4.1r of REVTeX, August 2010
+%%
+%%
+%%   Copyright (c) 2001, 2009, 2010 The American Physical Society.
+%%
+%%   See the REVTeX 4 README file for restrictions and more information.
+%%
+%
+% This is a template for producing manuscripts for use with REVTEX 4.0
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+%
+% Group addresses by affiliation; use superscriptaddress for long
+% author lists, or if there are many overlapping affiliations.
+% For Phys. Rev. appearance, change preprint to twocolumn.
+% Choose pra, prb, prc, prd, pre, prl, prstab, prstper, or rmp for journal
+%  Add 'draft' option to mark overfull boxes with black boxes
+%  Add 'showpacs' option to make PACS codes appear
+%  Add 'showkeys' option to make keywords appear
+\documentclass[aps,prl,twocolumn,superscriptaddress,floatfix]{revtex4-1}
+%\documentclass[aps,prl,preprint,superscriptaddress]{revtex4-1}
+%\documentclass[aps,prl,reprint,groupedaddress]{revtex4-1}
+
+% You should use BibTeX and apsrev.bst for references
+% Choosing a journal automatically selects the correct APS
+% BibTeX style file (bst file), so only uncomment the line
+% below if necessary.
+
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage{braket}
+\usepackage{mathtools}
+\graphicspath{{figures/}}
+\DeclareMathOperator{\sinc}{sinc}
+
+\begin{document}
+
+% Use the \preprint command to place your local institutional report
+% number in the upper righthand corner of the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+% Use the 'preprintnumbers' class option to override journal defaults
+% to display numbers if necessary
+%\preprint{}
+
+%Title of paper
+\title{Amplitude sensing with a trapped-ion mechanical oscillator}
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current
+% author. Explanatory text should go in the []'s, actual e-mail
+% address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro foreach each type of information
+
+% \affiliation command applies to all authors since the last
+% \affiliation command. The \affiliation command should follow the
+% other information
+% \affiliation can be followed by \email, \homepage, \thanks as well.
+\author{K. A. Gilmore}
+\email[]{kevin.gilmore@colorado.edu}
+%\homepage[]{Your web page}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{National Institute of Standards and Technology, Boulder, Colorado 80305, USA}
+\affiliation{JILA and Department of Physics, University of Colorado, Boulder, Colorado, 80309, USA}
+
+\author{J. G. Bohnet}
+\affiliation{National Institute of Standards and Technology, Boulder, Colorado 80305, USA}
+
+\author{B. C. Sawyer}
+\affiliation{Georgia Tech Research Institute, Atlanta, Georgia 30332, USA}
+
+\author{J. W. Britton}
+\affiliation{U.S. Army Research Laboratory, Adelphi, Maryland 20783, USA}
+
+\author{J. J. Bollinger}
+\affiliation{National Institute of Standards and Technology, Boulder, Colorado 80305, USA}
+
+%Collaboration name if desired (requires use of superscriptaddress
+%option in \documentclass). \noaffiliation is required (may also be
+%used with the \author command).
+%\collaboration can be followed by \email, \homepage, \thanks as well.
+%\collaboration{}
+%\noaffiliation
+
+\date{\today}
+
+\begin{abstract}
+
+\end{abstract}
+
+% insert suggested PACS numbers in braces on next line
+\pacs{}
+% insert suggested keywords - APS authors don't need to do this
+%\keywords{}
+
+%\maketitle must follow title, authors, abstract, \pacs, and \keywords
+\maketitle
+
+% If in two-column mode, this environment will change to single-column
+% format so that long equations can be displayed. Use
+% sparingly.
+%\begin{widetext}
+% put long equation here
+%\end{widetext}
+
+% figures should be put into the text as floats.
+% Use the graphics or graphicx packages (distributed with LaTeX2e)
+% and the \includegraphics macro defined in those packages.
+% See the LaTeX Graphics Companion by Michel Goosens, Sebastian Rahtz,
+% and Frank Mittelbach for instance.
+%
+% Here is an example of the general form of a figure:
+% Fill in the caption in the braces of the \caption{} command. Put the label
+% that you will use with \ref{} command in the braces of the \label{} command.
+% Use the figure* environment if the figure should span across the
+% entire page. There is no need to do explicit centering.
+
+% \begin{figure}
+% \includegraphics{}%
+% \caption{\label{}}
+% \end{figure}
+
+% Surround figure environment with turnpage environment for landscape
+% figure
+% \begin{turnpage}
+% \begin{figure}
+% \includegraphics{}%
+% \caption{\label{}}
+% \end{figure}
+% \end{turnpage}
+
+% tables should appear as floats within the text
+%
+% Here is an example of the general form of a table:
+% Fill in the caption in the braces of the \caption{} command. Put the label
+% that you will use with \ref{} command in the braces of the \label{} command.
+% Insert the column specifiers (l, r, c, d, etc.) in the empty braces of the
+% \begin{tabular}{} command.
+% The ruledtabular enviroment adds doubled rules to table and sets a
+% reasonable default table settings.
+% Use the table* environment to get a full-width table in two-column
+% Add \usepackage{longtable} and the longtable (or longtable*}
+% environment for nicely formatted long tables. Or use the the [H]
+% placement option to break a long table (with less control than 
+% in longtable).
+% \begin{table}%[H] add [H] placement to break table across pages
+% \caption{\label{}}
+% \begin{ruledtabular}
+% \begin{tabular}{}
+% Lines of table here ending with \\
+% \end{tabular}
+% \end{ruledtabular}
+% \end{table}
+
+% Surround table environment with turnpage environment for landscape
+% table
+% \begin{turnpage}
+% \begin{table}
+% \caption{\label{}}
+% \begin{ruledtabular}
+% \begin{tabular}{}
+% \end{tabular}
+% \end{ruledtabular}
+% \end{table}
+% \end{turnpage}
+
+
+% body of paper here - Use proper section commands
+% References should be done using the \cite, \ref, and \label commands
+\section{Introduction}
+% Put \label in argument of \section for cross-referencing
+%\section{\label{}}
+Measuring the amplitude of mechanical oscillators has engaged physicists for more than 50 years \citep{Weber1966}. This is motivated by metrology - many force sensors, for example, rely on measuring the amplitude of a mechanical oscillator - and by a desire to understand the fundamental limits of amplitude detection \citep{Caves1980}. Pursuing the ultimate limits of amplitude sensing has led to a wide range of exciting advances both in fundamental physics, from the detection of gravity waves and the fundamental quantum uncertainty of mesoscopic objects, to applied work with force microscopy and transduction of quantum signals. 
+
+During the past decade, optical-mechanical systems have demonstrated increasingly sensitive techniques for reading out the amplitude of a mechanical oscillator, with a recent demonstration obtaining a precision of a factor of ∼100 below the size of the ground state wave function \citep{Wilson2014a}. While optomechanical systems have assumed a wide range of physical systems, including torroidal resonators, nanobeams, membranes and others, the basic principle involves coupling the motion of the oscillator to a light field which is detected.
+
+Crystals of laser-cooled, trapped ions behave as atomic-scale mechanical oscillators \citep{Jost2009,Biercuk2010a,Sawyer2012} with tunable oscillator modes and very high quality factors (estimate here) \citep{Biercuk2010a,Sawyer2012,Shaniv2016,Ivanov2016a,Knunz2010}. Trapped-ion crystals therefore provide an ideal laboratory for investigating the fundamental limits of amplitude sensing, but to date there have only been a handful of investigations [5-8]. These investigations demonstrate amplitude detection comparable to or larger than the ground state wave function size.
+
+In this Letter we experimentally and theoretically analyze a technique
+with which the center-of-mass (COM) motion of a 2-dimensional trapped-ion
+crystal of $\sim100$ ions can be sensitively detected. Specifically,
+we employ a spin-dependent force that couples the COM motion with
+the internal spin degrees of freedom of the ions. When the frequency
+$\mu$ of the spin-dependent force matches the frequency $\omega$
+of an imposed COM oscillation, $Z_{c}\cos\left(\omega t\right)$,
+spin precession proportional to $Z_{c}$ occurs, which we read out
+with a precision imposed by spin projection noise. To carefully analyze
+the sensitivity of this technique, we study off-resonant sensing where
+$\omega$ is far from resonance with the mechanical COM resonance
+frequency $\omega_{z}$ of the ion array. We also study incoherent
+or asynchronous amplitude detection where the phase of the spin-dependent
+force varies relative to the phase of the COM oscillation. Incoherent
+detection produces a signal proportional to $\left(Z_{c}\right)^{2}$.
+We demonstrate a sensitivity of $(100\:\mathrm{pm})^{2}/\sqrt{Hz}$
+??? and the detection of amplitudes $Z_{c}$ as small as 50 pm,
+almost two orders of magnitude below the $\sim$2 nm ground state
+wave function size. For our set-up a 25 pm ?? amplitude corresponds
+to the detection of force/ion of 40 yN and an electric field of 230
+$\mu$V/m. 
+
+Orig intro:
+Well controlled and understood quantum systems offer advantages over their classical counterparts and are finding uses in a variety of up-and-coming disciplines. Quantum information and quantum cryptography are chief among them, but the use of such a quantum mechanical system as a sensor may prove to be tremendously useful. Quantum metrology, where the sensing protocol is enhanced by entanglement, is the most direct way to improve a measurement's sensitivity beyond the classical limit. However, such methods remain relatively far from useful application. The use of a quantum system sensitive to a physical parameter, such as an electric or magnetic field, is of more immediate usefulness for sensitive measurements \citep{Degen2016}. Cavity-based optomechanical resonators have proven to be tremendously sensitive to a wide variety of physical parameters and are the most prominent example of a mesoscopic system used as a quantum sensor \citep{Clark2016,Kampel2016,Kim2016a,Schreppler2014a}. Single ion sensors make use of their long coherence times to make measurements and are the prime example of a single quantum object used as a sensor \citep{Shaniv2016,Ivanov2016a,Knunz2010}. Our 2-D crystal of ions in a Penning trap operates in a regime between these two paradigms.
+ 
+What these different experimental setups have in common as sensors is that they all make use of a mechanical oscillator. An ion in an RF trap oscillates at the trap resonance frequency. A microfabricated resonator is an oscillating membrane. The ion crystal in an Penning trap behaves like both: the drumhead modes of the crystal oscillate like a membrane with the center of mass mode at the trap resonance frequency. The sensing of an applied drive is done by measuring the displacement of the oscillator. Naturally, the best force sensitivity for such a mechanical oscillator occurs when the applied force is driven at the resonance frequency. Driving the oscillator with a small, off-resonant force requires greater displacement sensitivity - as the same force applied on resonance results in a much larger displacement. In addition, the standard quantum limit (SQL) and fundamental quantum limit (QL) converge at the resonance, but off-resonance the SQL may be surpassed \citep{Ivanov2016,Kampel2016,Schreppler2014a}. By operating off-resonantly, we can demonstrate in the future with phase-coherent detection amplitude sensing below the SQL.
+
+By scaling up the number of ions we see an increase in sensitivity to ion displacement and electric fields compared to a single ion. Though our experiments are performed phase-incoherently and off-resonantly, with near-term improvements we expect to operate phase-coherently and on resonance with the center of mass mode frequency of the ion crystal. This would enable us to make use of recently demonstrated spin-squeezing in our ensemble of 100s of ions to perform further quantum enhanced sensing \citep{Bohnet2015a}. As it stands, we are able to detect a displacement of 200 pm due to an RF drive applied to the trap endcap electrode. The ground state wavefunction size is 10 nm, 50 times as large.
+
+We present a novel technique for amplitude and force sensing. By isolating and controlling a two-level system comprised of the effective spin-1/2 in each ion in our trap and applying a global spin-dependent force, the spin and motional degrees of freedom of the ions are coupled. This coupling allows us to measure the motional state of the ions by directly reading out the spin state. This method was used previously as a probe of the mode temperatures in the ion crystal in our Penning trap \citep{Sawyer2014a}.
+
+A prior version of this experimental apparatus using Doppler velocimetry reported force sensing of 390 yN $Hz^{-1}$ and displacements of 18 nm \citep{Biercuk2010a, Biercuk2011}. With near term improvements we expect to best this force sensitivity by []. We report an amplitude sensitivity two orders of magnitude improved.
+
+\section{Experimental Setup}
+Our experimental apparatus consists of $\prescript{9}{}{}$Be$^{+}$ ions confined to a single-plane Coulomb crystal in a Penning trap, described in Fig. \ref{Fig 1} and \citep{Bohnet2015a}. The ions are cooled to the Doppler limit and the scattered fluorescence is used for imaging. The spin-1/2 system is the $\prescript{2}{}{S}_{1/2}$ ground state of the valence electron spin $\ket{\uparrow} (\ket{\downarrow}) \equiv \ket{m_{s}=+1/2} (\ket{m_{s}=-1/2}) $. In the magnetic field of the Penning trap, the ground state is split by 124 GHz. A resonant microwave source is used to perform global rotations of the spin ensemble. A pair of off-resonant laser beams generate a spin-dependent optical dipole force, coupling the spins to the ions's axial motion. The spins can be used as a sensitive readout of the axial motion.
+\begin{figure}[h]
+  \subfloat[]{%
+    \includegraphics[width=.24\textwidth]{penning_trap}}\hfill
+  \subfloat[]{%
+    \includegraphics[width=.24\textwidth]{level_diagram}}\hfill
+  \caption{(a) Cross-section of the NIST Penning trap, characterized by an axial magnetic field $B = 4.45$ T and an axial trap frequency $\omega_z = 2\pi \times 1.57$ MHz. The blue disk represents the ion crystal. Cylindrical electrodes (orange) generate a harmonic confining potential along their axis. Radial confinement is provided by the Lorentz force from $\vec{E} \times \vec{B}$-induced rotation in the axial magnetic field. Time varying potentials applied to eight azimuthally segmented electrodes generate a rotating wall potential that controls the crystal rotation frequency. Doppler cooling beams are directed along $y$ and $z$. The beams responsible for the spin-dependent optical dipole force are at $10^{\circ} $ from the ion plane. Global, state-dependent fluoresence is collected on the side-view objective. (b) Energy levels of $\prescript{9}{}{}$Be$^{+}$ at B = 4.46 T.}\label{Fig 1}
+\end{figure}
+By measuring the decrease in the composite Bloch vector length produced by the application of a homogenous spin-dependent force, detailed information about the motional state of the ions is revealed. This spin dephasing is directly measured. The spin-dependent optical dipole force (ODF) is generated from the interference of a pair of detuned lasers, shown in Fig. \ref{Fig 1} (a). The ODF couples the spin and motional degrees of freedom through the interaction 
+\begin{equation}
+H_{ODF} = U\sum_{i}\sin(\delta k \cdot z_{i} - \mu t + \phi)\sigma^{z}_{i} ,
+\end{equation}
+where $\delta k$ is the wave vector, $\mu/2\pi$ is the beatnote frequency, and $\phi$ is the phase between the ODF beams, and $z_i$ and $\sigma^{z}_i$ are the position operator and Pauli spin matrix for ion $i$. This Hamiltonian may be rewritten, ignoring very low frequencies $\mu$, as
+\[H_{ODF} = U\sum_{i}\sin(\delta k \cdot z_i)\cos(\mu t + \phi)\sigma^{z}_i. \]
+Tuning the ODF difference frequency allows for readout of the motional state of the ions at that frequency by measuring the precession of the spins about the Bloch sphere and, in a typical Ramsey style experiment, projecting this on to the dark state (spin-down). Spin-dephasing, then, appears as an increase in spin-up population. The precession due to an axial oscillation can be determined by considering a classical driven motion of constant amplitude $z_{0}$, frequency $\omega$, and phase $\delta$, $z_i \rightarrow z_i +z_0\cos(\omega t+\delta)$.
+Then,
+\[H_{ODF} = DWF \cdot U \cdot \delta k \cdot z_0\cos((\omega - \mu)t + \delta + \phi) \sum_{i} \frac{\sigma^{z}_{i}}{2} \]
+where $DWF = \exp(-\delta k^2 \left< z^{2}_{i} \right> / 2) $ is the Debye-Waller factor, a reduction in interaction strength as a function of departure from the Lamb-Dicke regime.
+For the case $ \omega = \mu $, where the ODF frequency difference is equal to the frequency of the applied drive,
+\[\theta = \Delta\tau = DWF \cdot U \cdot \delta k \cdot z_0 \cdot \tau \cos(\delta - \phi) = \theta_{max}\cos(\delta - \phi)\]
+where $\Delta$ is the energy difference between spin-up and spin-down for each ion and $\tau$ is the total ODF interaction time. $\theta_{max}$ is the maximum precession, which occurs when the drive is in phase with the ODF beatnote.
+\begin{figure}[h]
+\includegraphics[width=.15\textwidth]{dephasing}
+\caption{After rotating to the equator on the Bloch sphere, an incoherent axial perturbation causes precession. The maximum precessed angle is $\theta_{max}$.}\label{Fig 2}
+\end{figure}
+
+Due to current experimental limitations, we do our measurements phase incoherently. However, were the phase of the applied force unknown or time-dependent, this phase-incoherent sensing would be necessary - and so, our experiment represents a 'worst-case' sensing experiment. In the phase-incoherent picture, the different relative phases between the drive and beatnote are sampled randomly with each repetition of the experiment. Despite this, one can extract the maximum precession angle, $\theta_{max}$. In a Ramsey sequence where the Bloch vector with no precession is rotated down to the dark state, the component along $-\hat{z}$ has length $\cos(\theta)$. Thus the probability for measuring spin-up is $P_{\uparrow} = \frac{1}{2}[1-e^{-\Gamma \tau} \cos(\theta)]$. $\tau$ is the total ODF interaction time and $\Gamma = \frac{1}{2}(\Gamma_{el} + \Gamma_{ram})$ is the spontaneous decay rate where $\Gamma_{el}$ ($\Gamma_{ram}$) is the elastic (Raman) scattering decoherence rate (Uys PRL ref). To model the phase incoherent experiment, one must average over this length, $ \left< \cos(\theta) \right> $. It can be shown that $ \left< \cos(\theta) \right> = J_0(\theta_{max}) $, where $J_0$ is the zeroth order Bessel function of the first kind. Thus,
+\begin{equation}
+\left< P_{\uparrow} \right> = \frac{1}{2} \left[ 1-e^{-\Gamma \tau}J_0(\theta_{max}) \right].
+\end{equation}
+To create an axial oscillation, we apply an AC voltage to the endcap of the Penning trap. This can be done either on-resonance or off-resonance with the center of mass mode of the ion crystal at $2\pi \times 1.57$ MHz. Characterization of the detection sensitivity requires calibration of the applied drive in terms of ion displacement. To calibrate the displacement of the ions as a result of this applied drive, we apply a static voltage to the endcap and measure the deflection of the ion crystal. The deflection is measured using an f/10 light collection system and a CCD camera, which provides spatial resolution of $\sim .8 \mu$m per pixel. From this calibration, we find 1 V results in 0.97 $\pm$ 0.009 $\mu$m of displacement.
+
+\section{Off-resonance amplitude sensing}
+By applying a $\sim$400 kHz drive to the endcap electrode, we can study the response of the ion harmonic oscillator to an off resonant force. A spin echo sequence is used to decouple from magnetic field fluctuations over the course of the experimental sequence. Our experimental sequence makes use of the quantum lock-in technique wherein the phase accumulated in each arm of the sequence is added coherently \citep{Kotler2011}. To extend the sequence out to long time in order to detect more sensitively, a CPMG style sequence is used. Figure 2 shows a CPMG sequence with 2 $\pi$ pulses and phase jumps appropriate for adding the phases. The general experimental sequence is as follows. A calibrated drive at $\sim$400 kHz is applied to the endcap of the trap and left on throughout the experiment. The ions are prepared in $\ket{\uparrow}$ with cooling and repump lasers. A microwave $\pi/2$ pulse rotates the spins to the $\hat{x}$ axis, to the superposition $\left[\ket{\uparrow} + \ket{\downarrow}\right]/\sqrt{2}$. The ODF beams are pulsed on for a duration T followed by a microwave $\pi$ pulse about $\hat{x}$ and another ODF pulse of duration T. After a second $\pi/2$ pulse about $\hat{y}$, the final state readout measures the population of the spins in $\ket{\uparrow}$ via global fluorescence due to photons scattered from the cooling beam. Adding in 6 additional ODF-$\pi$-ODF pulses allows us to push the sequence time out to 20 ms and maintain a background fully characterized by decoherence due to spontaneous emission.
+
+\begin{figure*}[h]
+  \subfloat[]{%
+    \includegraphics[width=.8\textwidth]{cpmg}}\\
+  \subfloat[]{%
+    \includegraphics[width=.8\textwidth]{8pi_cpmg}}\\
+  \subfloat[]{%
+    \includegraphics[width=.45\textwidth]{lineshape_vs_drive}}\hfill
+  \subfloat[]{%
+    \includegraphics[width=.45\textwidth]{lineshape_vs_odf}}
+  \caption{(a) CPMG sequence with 2 $\pi$ pulses. Orange blocks represent ODF pulses, grey microwave rotations, and blue cooling and detecting. In this experiment, the classical drive is left on throughout. After each $\pi$ pulse, the ODF phase is jumped in order to sum the phases accumulated in each ODF arm. (b) CPMG sequence with 8 $\pi$ pulses. Cooling and detection remain the same, and the phase is jumped by the same amount after each $\pi$ pulse. Chaining the ODF pulses in this fashion allows us to go to much longer total interaction times (20 ms) and detect much smaller induced displacements. (c) Lineshape of the classical drive for drive amplitudes of 500 pm (red), 1 nm (green) and 2 nm (purple). Black points are background, with drive turned off. Dashed lines are theory curves with no free parameters.  (d) Lineshape for classical drive displacement of 500 pm and  fractional ODF power of 1 (red), 0.5 (green), 0.3 (purple), and 0.15 (dark green). As the ODF power is increased, the background rises and the optimal signal-to-noise is found.}\label{Fig 3}
+\end{figure*}
+
+This sequence, with fixed ODF evolution times T, is sensitive to particular modulation frequencies given by $ \omega/2\pi = (2n+1)/(2(T+t_{\pi}))$. In principle, given a signal with a certain frequency T would be adjusted accordingly.
+
+To model the lineshape of the signal, it is necessary to account for the accumulated phase due to the spin-dependent ODF potential without making the simplification that $ \omega = \mu $. This results in a characteristic response function for each sequence. For the 8$\pi$ pulse CPMG sequence the response function is given by:
+%\begin{widetext}
+%\begin{equation}
+%\theta_{tot} = \theta_{max} \left[ \frac{2 \sin(\frac{1}{2}[(\omega-\mu)T])}{\omega-\mu} \right] 
+%\left[ \sin(\frac{\omega}{2}(T+t_{\pi})) \right] \left[ \sin(\frac{1}{2}[\omega (T+t_{\pi}) + (\omega - \mu)T)]) \right] \left[ \cos(\omega(T+t_{\pi})+(\omega - \mu)T) \right] \left[ \cos(2(\omega(T+t_{\pi})+(\omega - \mu)T)) \right] 
+%\end{equation}
+%\end{widetext}
+
+\begin{widetext}
+\begin{equation}
+\theta_{tot} = \theta_{max} \left[ \sinc \left( \frac{T}{2} \left( \omega-\mu \right) \right) \right] 
+\left[ \cos \left( \frac{T}{2} \left( \omega - \mu \right) \right) \right] \left[ \cos(T(\omega - \mu)) \right] \left[ \cos(2T(\omega - \mu)) \right] .
+\end{equation}
+\end{widetext}
+Figure \ref{Fig 3} (c) shows the emergence of the signal out of the background as the drive amplitude is increased. Figure \ref{Fig 3} (d) shows the evolution of the signal relative to the background as the power of the ODF beams is increased. In both cases the theory has no free parameters. The background is accounted for by our model of spontaneous emission. The spontaneous emission decay rates are calculated from the measured AC Stark shifts induced by each ODF laser beam, a proxy for the laser intensity at the ions.
+
+With the drive frequency chosen to correspond to the peak signal, scanning the power of the ODF laser varies the strength of the measurement. For particular drive amplitudes, by comparing the curve to the background, the signal and the signal-to-noise can be extracted. From this, the sensitivity of the sequence is found. To calculate the signal-to-noise ratio, a value for $\theta^{2}_{max}$ needs to be extracted. We use $\theta^{2}_{max}$ instead of $\theta_{max}$ because the incoherent experiment is second-order sensitive to precession. Taking the difference between $\left< P_{\uparrow} \right>$ with the classical drive applied and $\left< P_{\uparrow} \right>_{bckgnd}$ with no drive and solving for $J_0(\theta_{max})$ yields
+\[J_0(\theta_{max}) = 1 - 2e^{\Gamma \tau} \left[ \left< P_{\uparrow} \right> - \left< P_{\uparrow} \right>_{bckgnd} \right] \]
+The signal-to-noise for a single experiment is given by $S/N =\theta_{max}^{2}/\delta \theta_{max}^{2}$, where $\delta \theta_{max}^{2} \equiv \delta F(\theta_{max}^{2})/ \left( \frac{dF(\theta_{max}^{2})}{d\theta_{max}^{2}} \right)$ and  $F(\theta_{max}^{2}) \equiv \frac{1-J_0(\theta_{max})}{2}$. We ignore noise in the background, as we can perform sufficiently many experiments with no applied drive to make the background noise arbitrarily small. Then $\delta J_0(\theta_{max}) = 2e^{\Gamma \tau} \sqrt{\sigma^{2}_{P_{\uparrow}} + \delta \left< P_{\uparrow} \right>}$, where $\sigma^{2}_{P_{\uparrow}}$ is the variance due to shot-to-shot fluctuations of $\cos(\theta)$ caused by the (incoherent nature of the experiment) incoherence between the phase of the applied drive and the ODF beatnote and $\delta \left< P_{\uparrow} \right>$ is the projection noise from the measurement of $P_{\uparrow}$. As the drive amplitude is decreased, the relative contribution of $\sigma^{2}_{P_{\uparrow}}$ to the noise decreases as well, and the projection noise becomes dominant. In this regime, the signal-to-noise ratio begins to drop, representing the limit of sensitivity for this experiment. To extract this limit, we plot the signal-to-noise as a function of ion displacement in Fig. 4. 
+\begin{figure}[h]
+\includegraphics[width=.45\textwidth]{sense_lim}
+\caption{Limit of amplitude sensing. As the amplitude of the applied drive is decreased, the projection noise of the spin ensemble dominates and the signal-to-noise ratio decreases. At larger amplitudes, the shot-to-shot fluctuations of the precession angle $\theta^{2}$ limit the signal-to-noise ratio to 1. }\label{Fig 4}
+\end{figure}
+
+\section{Conclusion}
+
+\subsection{}
+\subsubsection{}
+
+
+% Specify following sections are appendices. Use \appendix* if there
+% only one appendix.
+%\appendix
+%\section{}
+
+% If you have acknowledgments, this puts in the proper section head.
+%\begin{acknowledgments}
+% put your acknowledgments here.
+%\end{acknowledgments}
+
+% Create the reference section using BibTeX:
+\bibliographystyle{apsrev4-1}
+%\bibliographystyle{apalike}
+\bibliography{force_sensing}
+
+\end{document}

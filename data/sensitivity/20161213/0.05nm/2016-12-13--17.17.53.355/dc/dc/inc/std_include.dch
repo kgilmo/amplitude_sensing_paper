@@ -1,0 +1,12 @@
+//This file should be called before anything else in an experiment.
+@advwvf
+@pdq
+@include "inc/std_names.dch"
+pulse expStart 10; //the first pulse is the state of TTLs if experiment is not retriggered
+pulse swRot off;  //to always start with uWave in rotation mode
+pulse repump_block on;  //to always unblock repump for state prep
+
+@include "inc/std_inline.dch"
+@include "inc/std_abstraction.dch"
+@include "inc/std_pdqdac.dch"
+

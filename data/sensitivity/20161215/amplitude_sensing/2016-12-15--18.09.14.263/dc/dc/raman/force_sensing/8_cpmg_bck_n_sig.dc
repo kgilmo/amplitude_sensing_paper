@@ -1,0 +1,80 @@
+// SE_only.dc
+@include "inc/std_include.dch"
+
+//@absolutephase
+//@phasetrack
+//@xtrig
+
+fvar pre_t = cooling_pre_t dlb:100 dub:5000;
+fvar initial_t = sf_pio2 dlb:0.95*sf_pi/2.0 dub:1.05*sf_pi/2.0;
+fvar arm_t = 1000 dlb:10.0 dub:4000.0;
+fvar middle_t = sf_pi dlb:sf_pi*0.95 dub:1.05*sf_pi;
+fvar middle_p = Pi/2.0 dlb:0 dub:Pi;
+fvar final_p = 0 dlb:0 dub:2.0*Pi;
+fvar final_t = sf_pio2 dlb:1 dub:4*sf_pi;
+fvar raman_df = 1000*(450+1/2)/(arm_t+sf_pi + 5.6) dlb:50 dub:70; //in kHz
+fvar raman_p = Pi dlb:0 dub:2.0*Pi;
+fvar time_shift = 5.6 dlb:0 dub:100;
+fvar dummy = 1.0 dlb:1.0 dub:10.0;
+fvar f = 30.0 + (450+1/2)/(arm_t+sf_pi + 5.6); //in MHz (30 MHz offset for mixer)
+
+@include "inc/std_cool.dch" 
+inline a_nopulse(pre_t);
+var p = 2*Pi*raman_df/1000*(arm_t + middle_t + 5.6);
+inline setddsf(ddstickle, f, 0.0);
+
+//do cpmg for background
+
+inline a_sfPulse_f0(initial_t,0);
+inline a_odf_pulse(raman_df/1000.0,arm_t,0);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,2*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,3*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,4*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,5*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,6*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,7*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,arm_t,8*p);
+inline a_sfPulse_f0(final_t,final_p);
+inline a_nopulse(2);
+
+pulse det13 det_t;
+
+pulse swtickle on;
+@include "inc/std_cool.dch" 
+
+//do cpmg for signal
+
+inline a_sfPulse_f0(initial_t,0);
+inline a_odf_pulse(raman_df/1000.0,arm_t,0);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,2*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,3*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,4*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,5*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,6*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,2*arm_t,7*p);
+inline a_sfPulse_f0(middle_t,middle_p);
+inline a_odf_pulse(raman_df/1000.0,arm_t,8*p);
+inline a_sfPulse_f0(final_t,final_p);
+inline a_nopulse(2);
+
+pulse det14 det_t;
+pulse swtickle off;
+
+@include "inc/std_ending.dch"

@@ -1,0 +1,138 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.26)  13 JAN 2017 13:47
+entering extended mode
+**sensing*limits.tex
+("C:\Users\kag3\Documents\GitHub\force sensing paper\sensing limits.tex"
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\latin9.def"
+File: latin9.def 2015/03/17 v1.2c Input encoding file
+))
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.st
+y"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.s
+ty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cf
+g"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engli
+sh.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) ("C:\Users\kag3\Documents\GitHub\force sensing paper\sensing limits.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+[1
+
+{C:/Users/kag3/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (14.52557pt too wide) in paragraph at lines 150--154
+\T1/cmr/m/n/10 Equation (15[]) is max-i-mized for $\OML/cmm/m/it/10 U=\U/msb/
+m/n/10 ~ \OT1/cmr/m/n/10 = 1$\T1/cmr/m/n/10 . With $\OML/cmm/m/it/10 DWF \OT1/c
+mr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 86$\T1/cmr/m/n/10 , $\OML/cmm/m/
+it/10 k \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 = []$\T1/cmr/m/n/10 ,
+ []
+
+[3] ("C:\Users\kag3\Documents\GitHub\force sensing paper\sensing limits.aux") )
+ 
+Here is how much of TeX's memory you used:
+ 1181 strings out of 493643
+ 14249 string characters out of 3135817
+ 73475 words of memory out of 3000000
+ 4599 multiletter control sequences out of 15000+200000
+ 7652 words of font info for 25 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 25i,5n,26p,298b,129s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\kag3\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
+m1000.pk> <C:\Users\kag3\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\ecbx2074.pk><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kag3/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/kag3/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/kag3/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+5.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/kag3/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/kag3/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "sensing limits.pdf" (3 pages, 137533 bytes).
+PDF statistics:
+ 141 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
