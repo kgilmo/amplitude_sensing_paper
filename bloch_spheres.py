@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jan 25 13:47:58 2017
+
+@author: kag3
+"""
+import numpy as np
+from numpy import pi
+from qutip import Bloch
+from scipy.special import j0
+
+b1 = Bloch()
+b1.zlabel = ['$z$','']
+b1.font_size = 30
+b1.point_marker = ['^']
+b1.point_color = ['r']
+b1.point_size = [10]
+vec_num = 20
+thetas = np.linspace(0,10,10)
+
+for theta_max in thetas:
+    x = np.array([[np.cos(th)] for th in np.linspace(-theta_max, theta_max, vec_num)])
+    y = np.array([[np.sin(th)] for th in np.linspace(-theta_max, theta_max, vec_num)])
+    z = np.zeros((vec_num,1))
+    
+    
+    x_j = j0(theta_max)
+    Pup= 0.5*(1-x_j)
+    print('j0 =',Pup)
+    xp = [x_j*np.cos(th) for th in np.linspace(0, pi/2, 10)]
+    yp = np.zeros(10)
+    zp = [x_j*np.sin(th) for th in np.linspace(0, -pi/2, 10)]
+    
+    b1.add_points([xp,yp,zp])
+    b1.add_vectors(([0,0,-x_j],[x_j,0,0]))
+    b1.vector_color = ['r','r','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b']
+    b1.vector_width = 1
+    
+    vecs = np.concatenate((x,y,z),axis=1)
+    b1.add_vectors(vecs)
+    b1.show()
+    
+    b1.clear()
+    b1 = Bloch()
+    b1.zlabel = ['$z$','']
+    b1.font_size = 30
+    b1.point_marker = ['^']
+    b1.point_size = [10]
+    b1.point_color = ['r']
