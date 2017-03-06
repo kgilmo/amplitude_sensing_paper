@@ -1,7 +1,0 @@
-//standard ending commands
-
-// NOTE YOU CANNOT END WITH A DETECTION PULSE!!!
-//pulse odfPhaseLockIntegratorOff on;
-inline a_bdrd_on();
-pulse nopulse 5;
-

@@ -1,0 +1,46 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2016.11.22)  3 MAR 2017 11:53
+entering extended mode
+**wordcount.tex
+(C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\wordcount.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+File: word_count.tex 2016/06/03 v1.7 Michael Downes
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+\thickmuskip=\muskip10
+\@charfontname=\skip41
+\hfuzz=\dimen102
+
+No auxiliary output files.
+
+
+The 'wordcount' utility provides a way of estimating the number of
+words in a LaTeX document.
+
+[Warning: The counting method uses a large log file as an intermediate
+step. If your disk space is extremely low the counting process
+may end prematurely for lack of space.]
+
+File name [press RETURN to cancel]: 
+! Emergency stop.
+<read *> 
+         
+l.173 \do
+         
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 236 strings out of 493644
+ 2081 string characters out of 3135842
+ 52601 words of memory out of 3000000
+ 3708 multiletter control sequences out of 15000+200000
+ 6053 words of font info for 16 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 21i,0n,17p,120b,37s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

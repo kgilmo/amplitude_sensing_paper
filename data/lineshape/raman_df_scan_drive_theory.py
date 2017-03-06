@@ -22,7 +22,7 @@ raw = True
 avg_scans = True
 title = r't$_{evolve}$: 20 ms, 0.2 ODF power, vs drive amp'
 
-files_to_use = [1,2,3,4]
+files_to_use = [1,2,3,4,0]
 
 base_path = os.getcwd()
 fns = [os.listdir(base_path)[i] for i in files_to_use]
@@ -48,7 +48,7 @@ avg_ODF_pwr_frac = []
 names = []
 As = []
 sig_max_all = []
-mVpp_all = []
+z_all = []
 
 #theory calc info
 t_s = 5.6*1e-6
@@ -78,6 +78,8 @@ for i,fn in enumerate(fns):
     mVpp = hf.get_ionProp_value('raman%force_sensing%drive_amp_mVpp')
     if i is 0:
         mVpp = 0
+    if i is 4:
+        mVpp = 10.1
     z = (mVpp*1e-9)/2    
     ACSS_l = l_pwr*3.21e4
     ACSS_u = u_pwr*3.1e4
@@ -114,7 +116,7 @@ for i,fn in enumerate(fns):
     avg_ODF_pwr_frac.append((l_pwr+u_pwr)/2.)
     As.append(A)
     sig_max_all.append(sig_max)
-    mVpp_all.append(mVpp)
+    z_all.append(z)
  #Load data messages
 
     print( "Ion number from loading calibration: {:.0f}".format(N))
@@ -126,22 +128,22 @@ for i,fn in enumerate(fns):
 #%% Data analysis
 for i,data in enumerate(Pup):
 
-    l = '{:.0f} mVpp ('.format(mVpp_all[i]) + names[i] +')'
-    shape = ['d','^','d','o']    
+    l = '{:.1f}'.format(z_all[i]*1e9)
+    shape = ['v','d','^','s','o']    
     plt.errorbar(raman_df[i]-drive_freq[i],data,yerr=err[i],marker=shape[i],linestyle='',label=l)
     if i is not 0:
         sig_max = sig_max_all[i]
         drive_detun =  np.linspace((raman_df[i]-drive_freq[i])[0],(raman_df[i]-drive_freq[i])[-1],1000)
-        print(raman_df[i]-drive_freq[i])
+#        print(raman_df[i]-drive_freq[i])
         plt.plot(drive_detun,fun_cpmg_j2(As[i]),'--',color='#0b1924')
 
-#plt.legend(fontsize=9,loc=(1,0),title='Drive amplitude')
+plt.legend(fontsize=9,loc=(.83,.56),title='$Z_{c}$ (nm)')
 plt.ylim(0)
 #plt.xlim(100,200)
 #plt.title(title)
-plt.ylabel("Bright Fraction")
-plt.xlabel('Raman Beatnote Detuning from Drive [Hz]')
+plt.ylabel(r'Bright Population $<P_{\uparrow}>$')
+plt.xlabel(r'ODF Detuning $(\mu-\omega)/(2\pi)$ (Hz)')
 plt.xlim(-300,300)
 plt.ylim(0.0,0.7)
-
-
+plt.grid(False)
+#plt.savefig(r'C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\figures\lineshape_hires.png',dpi=300,transparent=True)

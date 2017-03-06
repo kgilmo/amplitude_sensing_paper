@@ -1,0 +1,810 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.3.3)  3 MAR 2017 11:57
+entering extended mode
+**word_count.tex
+(C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\revtex\revtex4-1.cl
+s"
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+\eqncolsep=\skip41
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\footins@recovered=\box32
+\column@recovered=\box33
+\pagesofar=\box34
+\footsofar=\box35
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5578.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count91
+\fbox@1=\box36
+\c@table=\count92
+\fbox@2=\box37
+\c@video=\count93
+\fbox@4=\box38
+\@bibdataout=\write3
+\widetext@top=\box39
+\widetext@bot=\box40
+Class revtex4-1 Info: Selecting society aps on input line 7542.
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\revtex\aps4-1.rtx"
+File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
+mentation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+Class revtex4-1 Info: Selecting journal prl on input line 7544.
+Class revtex4-1 Info: APS journal PRL selected on input line 7545.
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\revtex\aps10pt4-1.r
+tx"
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
+documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\textcase\textcase.s
+ty"
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+) ("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip44
+\bibsep=\skip45
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\revtex\revsymb4-1.s
+ty"
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
+or documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.s
+ty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.s
+ty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.c
+fg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.d
+ef"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarer
+r.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.
+sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.st
+y"
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen104
+\captionmargin@=\dimen105
+\captionwidth=\dimen106
+\caption@tempdima=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+\c@KVtest=\count96
+\sf@farskip=\skip46
+\sf@captopadj=\dimen111
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count97
+\c@subfigure@save=\count98
+\c@lofdepth=\count99
+\c@subtable=\count100
+\c@subtable@save=\count101
+\c@lotdepth=\count102
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\braket\braket.sty")
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mathtools
+.sty"
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+ ("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen112
+\calc@Bdimen=\dimen113
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count105
+\calc@Cskip=\skip53
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhsetup.s
+ty"
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+"
+Package: amstext 2000/06/29 v2.01
+ ("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen114
+)
+LaTeX Info: Redefining \text on input line 39.
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen115
+) ("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.st
+y"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count106
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count107
+\leftroot@=\count108
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count109
+\DOTSCASE@=\count110
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen116
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count111
+\c@MaxMatrixCols=\count112
+\dotsspace@=\muskip11
+\c@parentequation=\count113
+\dspbrk@lvl=\count114
+\tag@help=\toks18
+\row@=\count115
+\column@=\count116
+\maxfields@=\count117
+\andhelp@=\toks19
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
+\@envbody=\toks20
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count118
+\l_MT_multwidth_dim=\dimen123
+\origjot=\skip57
+\l_MT_shortvdotswithinadjustabove_dim=\dimen124
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen125
+\l_MT_above_intertext_sep=\dimen126
+\l_MT_below_intertext_sep=\dimen127
+\l_MT_above_shortintertext_sep=\dimen128
+\l_MT_below_shortintertext_sep=\dimen129
+)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 41.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 41.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 41.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 41.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 41.
+ (C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+
+("C:\Users\kag3\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
+i"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen130
+\scratchbox=\box43
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen131
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks23
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+
+Package natbib Warning: Citation `Sawyer2012' on page 1 undefined on input line
+ 104.
+
+
+Package natbib Warning: Citation `Sawyer2012' on page 1 undefined on input line
+ 104.
+
+
+Package natbib Warning: Citation `Sawyer2012' on page 1 undefined on input line
+ 104.
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 104--105
+[]\OT1/cmr/m/n/10 Crystals of laser-cooled, trapped ions be-have as
+ []
+
+<figures/expt_cpmg.png, id=1, 432.86719pt x 455.45157pt>
+File: figures/expt_cpmg.png Graphic file (type png)
+
+<use figures/expt_cpmg.png>
+Package pdftex.def Info: figures/expt_cpmg.png used on input line 112.
+(pdftex.def)             Requested size: 229.49844pt x 241.47157pt.
+
+
+LaTeX Warning: Reference `Hodf' on page 1 undefined on input line 123.
+
+[1{C:/Users/kag3/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 125.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 125.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+
+Package natbib Warning: Citation `Uys2010' on page 2 undefined on input line 12
+7.
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 131--132
+[]\OT1/cmr/m/n/10 To cre-ate the steady-state COM ax-ial os-cil-la-tion
+ []
+
+<figures/lineshape.png, id=16, 1282.03969pt x 858.95906pt>
+File: figures/lineshape.png Graphic file (type png)
+
+<use figures/lineshape.png>
+Package pdftex.def Info: figures/lineshape.png used on input line 138.
+(pdftex.def)             Requested size: 229.49844pt x 153.75403pt.
+
+<figures/measurement_strength_inset_z2_485.png, id=17, 493.0922pt x 475.7775pt>
+File: figures/measurement_strength_inset_z2_485.png Graphic file (type png)
+<use figures/measurement_strength_inset_z2_485.png>
+Package pdftex.def Info: figures/measurement_strength_inset_z2_485.png used on 
+input line 143.
+(pdftex.def)             Requested size: 229.49844pt x 221.44478pt.
+
+
+LaTeX Warning: Reference `Bessel' on page 2 undefined on input line 147.
+
+[2 <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/expt_cpmg.pn
+g>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 148.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 148.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+<figures/sensing_limit.png, id=27, 1257.19687pt x 846.16125pt>
+File: figures/sensing_limit.png Graphic file (type png)
+
+<use figures/sensing_limit.png>
+Package pdftex.def Info: figures/sensing_limit.png used on input line 150.
+(pdftex.def)             Requested size: 229.49844pt x 154.45865pt.
+
+
+LaTeX Warning: Reference `eq:signal/noise' on page 3 undefined on input line 16
+3.
+
+[3 <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/lineshape.pn
+g> <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/measurement_
+strength_inset_z2_485.png> <C:/Users/kag3/Documents/GitHub/amplitude_sensing_pa
+per/figures/sensing_limit.png>]
+
+LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 177.
+
+
+LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 178.
+
+
+LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 183.
+
+
+Package natbib Warning: Citation `Hume2011' on page 4 undefined on input line 1
+86.
+
+
+Package natbib Warning: Citation `Hempel2013' on page 4 undefined on input line
+ 191.
+
+
+Package natbib Warning: Citation `Arias2012' on page 4 undefined on input line 
+191.
+
+
+Package natbib Warning: Citation `Chaudhuri2015' on page 4 undefined on input l
+ine 191.
+
+(C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.bbl
+! Undefined control sequence.
+l.74 ...61102} (\bibinfo {year} {2016})},\ \Eprint
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.86   {2014})},\ \Eprint
+                          {http://arxiv.org/abs/0712.1618} {arXiv:0712.1618}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.108   (\bibinfo {year} {2013})},\ \Eprint
+                                            {http://arxiv.org/abs/arXiv:1206...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.121 ...{820} (\bibinfo {year} {2009})},\ \Eprint
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.138 ...} {1} (\bibinfo {year} {2010})},\ \Eprint
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.159   \Eprint
+                {http://arxiv.org/abs/1111.7236} {arXiv:1111.7236} \BibitemShut
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.174   (\bibinfo {year} {2014})},\ \Eprint
+                                            {http://arxiv.org/abs/1312.4896}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.189 ...} {\  (\bibinfo {year} {2016})},\ \Eprint
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.203   {2014})},\ \Eprint
+                           {http://arxiv.org/abs/1410.6191} {arXiv:1410.6191}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.220 ...{683} (\bibinfo {year} {2009})},\ \Eprint
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.233   (\bibinfo {year} {2010})},\ \Eprint
+                                            {http://arxiv.org/abs/1004.0780}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.240   }\href@noop
+                    {} {\bibfield  {journal} {\bibinfo  {journal} {ArXiv e-p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.242   \Eprint
+                {http://arxiv.org/abs/arXiv:1602.08645v1} {arXiv:arXiv:1602....
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.268   10.1103/PhysRevA.89.033408},\ \Eprint
+                                              {http://arxiv.org/abs/1401.0672}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.276   \Eprint
+                {http://arxiv.org/abs/1606.07299} {arXiv:1606.07299} \Bibite...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.305 ...\ \bibnamefont {Bollinger}},\ }\href@noop
+                                                   {} {\bibfield  {journal}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.307   {year} {2015})},\ \Eprint
+                                  {http://arxiv.org/abs/1512.03756}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.323   {1689} (\bibinfo {year} {1998})},\ \Eprint
+                                                   {http://arxiv.org/abs/971...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.339 ...{489} (\bibinfo {year} {2012})},\ \Eprint
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.352   {2011})},\ \Eprint
+                           {http://arxiv.org/abs/1101.4885} {arXiv:1101.4885}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.376   (\bibinfo {year} {2011})},\ \Eprint
+                                            {http://arxiv.org/abs/1103.3334}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+Underfull \hbox (badness 3396) in paragraph at lines 53--200
+[]\OT1/cmr/m/n/10 Weber1966,  ()Caves1980,  ()Ab-bott2016,  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 pelmeyer2014,  (), http://arxiv.org/abs/0712.1618
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:0712.1618 Butt2005,  ()Palo-maki2013,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 (), http://arxiv.org/abs/arXiv:1206.5562v1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:arXiv:1206.5562v1 Teufel2009,  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 berger2010,  (), http://arxiv.org/abs/0904.4051
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:0904.4051 West-phal2012,  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/1111.7236 arXiv:1111.7236
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 Schrep-pler2014a,  (), http://arxiv.org/abs/1312.4896
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:1312.4896 Kam-pel2016 (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/1607.06831 arXiv:1607.06831
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 Wil-son2014a,  (), http://arxiv.org/abs/1410.6191
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:1410.6191 Jost2009,  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/0901.4779 arXiv:0901.4779
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 Bier-cuk2010,  (), http://arxiv.org/abs/1004.0780
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:1004.0780 Shaniv2016  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/arXiv:1602.08645v1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:arXiv:1602.08645v1 Knunz2010,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 ()Sawyer2014 (), 10.1103/Phys-RevA.89.033408,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/1401.0672 arXiv:1401.0672
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 Ivanov2016,  (), http://arxiv.org/abs/1606.07299
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:1606.07299 Itano1993,  ()Bohnet2015  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/1512.03756 arXiv:1512.03756
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 Wineland1998a,  (), http://arxiv.org/abs/9710025
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:9710025 [quant-ph] Brit-ton2012,  (),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 http://arxiv.org/abs/1204.5789 arXiv:1204.5789
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 Kotler2011,  (), http://arxiv.org/abs/1101.4885
+ []
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 53--200
+\OT1/cmr/m/n/10 arXiv:1101.4885 Kotler2013,  ()Bier-cuk2011,  (),
+ []
+
+
+Package natbib Warning: There were undefined citations.
+
+[4] (C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
+
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5112 strings out of 493643
+ 73822 string characters out of 3135818
+ 182429 words of memory out of 3000000
+ 8461 multiletter control sequences out of 15000+200000
+ 6985 words of font info for 26 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 36i,8n,38p,1802b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbx9.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kag3/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kag3/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/kag3/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/User
+s/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi9.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/kag3/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kag3/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ka
+g3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb>
+Output written on word_count.pdf (4 pages, 641752 bytes).
+PDF statistics:
+ 88 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
