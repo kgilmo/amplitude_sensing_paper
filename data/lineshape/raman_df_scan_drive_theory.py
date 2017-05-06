@@ -138,12 +138,10 @@ for i,data in enumerate(Pup):
         plt.plot(drive_detun,fun_cpmg_j2(As[i]),'--',color='#0b1924')
 
 plt.legend(fontsize=9,loc=(.83,.56),title='$Z_{c}$ (nm)')
-plt.ylim(0)
-#plt.xlim(100,200)
-#plt.title(title)
 plt.ylabel(r'Bright Population $<P_{\uparrow}>$')
 plt.xlabel(r'ODF Detuning $(\mu-\omega)/(2\pi)$ (Hz)')
 plt.xlim(-300,300)
 plt.ylim(0.0,0.7)
 plt.grid(False)
+
 #plt.savefig(r'C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\figures\lineshape_hires.png',dpi=300,transparent=True)

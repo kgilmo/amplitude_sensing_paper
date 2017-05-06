@@ -15,6 +15,7 @@ from scipy.special import j0,j1,jv
 
 import hfGUIdata as hf
 import plot_tools as pt
+import qutip
 #import squeeze_func as squ
 
 avg_scans = True

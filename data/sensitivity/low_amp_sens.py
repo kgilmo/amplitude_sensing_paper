@@ -201,11 +201,12 @@ for i,fn in enumerate(fns):
     errs += [np.std(S_N)/sqrt(len(S_N))]
     SN2s += [np.mean(S_N2)]
     err2s += [np.std(S_N2)/sqrt(len(S_N2))]
-    
+              
+#plt.figure(1)
+#plt.subplot()              
 plt.errorbar(amps,SNs,yerr=errs,linestyle = '', marker='o',ms=6,label='S/N using std dev of diffs')
 #plt.errorbar(amps,SN2s,yerr=err2s,linestyle = '', marker='o',label='S/N using sum of std dev of sig and bck')
 
-plt.subplot()
 plt.subplot().set_xscale('log')
 plt.subplot().set_yscale('log')
 
@@ -250,7 +251,10 @@ plt.plot(amps_th,S_N_th,'--',lw=2,label='Full theory')
 plt.plot(amps_th[:20],(amps_th[:20]/0.2)**2,lw=1,label='limit')
 #plt.legend(loc=(1,0))
 plt.ylim(0.0,2)
+plt.xlim(0.0,11)
 plt.xlabel(r'Amplitude $Z_{c}$ (nm)')
 plt.ylabel(r'Signal / Noise $Z_{c}^{2}/\delta Z_{c}^{2}$')
+plt.axes().set_aspect(0.45)
 
-#plt.savefig(r'C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\figures\sensing_limit.png',dpi=300,transparent=True)
+
+plt.savefig(r'C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\figures\sensing_limit_sm.png',dpi=300,transparent=True)

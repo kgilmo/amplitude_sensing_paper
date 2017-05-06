@@ -187,7 +187,7 @@ for i,fn in enumerate(fns):
 
 #plt.title(r'8 pi CPMG, 24 ms total time '+ fn[:-7])
 plt.title('')
-plt.xlabel(r'ODF Coupling $F_{0}/F_{0M}$')
+plt.xlabel(r'ODF Strength $F_{0}/F_{0M}$')
 plt.ylabel(r'Bright Population $<P_{\uparrow}>$')
 plt.ylim(0,0.6)
 plt.xlim(0,1.1)
@@ -229,7 +229,7 @@ plt.ylim(-0.05,0.5)
 plt.xlim(0,0.8)
 plt.grid(False)
 
-#plt.savefig(r'C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\figures\measurement_strength_inset_z2.png',dpi=300,transparent=True)
+#plt.savefig(r'C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\figures\odf_strength.png',dpi=300,transparent=True)
 #plt.plot(odf_pwr[1],S_N,'o')
 #
 #plt.plot(odf_pwr[1],diffs,'o')

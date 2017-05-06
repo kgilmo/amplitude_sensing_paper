@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.3.3)  3 MAR 2017 11:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.3.3)  2 MAY 2017 14:29
 entering extended mode
 **word_count.tex
 (C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.tex
@@ -320,449 +320,278 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
-Package natbib Warning: Citation `Sawyer2012' on page 1 undefined on input line
- 104.
+Package natbib Warning: Citation `Weber1966' on page 1 undefined on input line 
+43.
+
+
+Package natbib Warning: Citation `Caves1980' on page 1 undefined on input line 
+43.
+
+
+Package natbib Warning: Citation `Abbott2016' on page 1 undefined on input line
+ 43.
+
+
+Package natbib Warning: Citation `Aspelmeyer2014' on page 1 undefined on input 
+line 43.
+
+
+Package natbib Warning: Citation `Butt2005' on page 1 undefined on input line 4
+3.
+
+
+Package natbib Warning: Citation `Palomaki2013' on page 1 undefined on input li
+ne 43.
+
+
+Package natbib Warning: Citation `Teufel2009' on page 1 undefined on input line
+ 43.
+
+
+Package natbib Warning: Citation `Anetsberger2010' on page 1 undefined on input
+ line 43.
+
+
+Package natbib Warning: Citation `Westphal2012' on page 1 undefined on input li
+ne 43.
+
+
+Package natbib Warning: Citation `Schreppler2014a' on page 1 undefined on input
+ line 43.
+
+
+Package natbib Warning: Citation `Kampel2016' on page 1 undefined on input line
+ 43.
+
+
+Package natbib Warning: Citation `Wilson2014a' on page 1 undefined on input lin
+e 43.
+
+
+Package natbib Warning: Citation `Aspelmeyer2014' on page 1 undefined on input 
+line 43.
+
+
+Package natbib Warning: Citation `Jost2009' on page 1 undefined on input line 4
+5.
+
+
+Package natbib Warning: Citation `Biercuk2010' on page 1 undefined on input lin
+e 45.
 
 
 Package natbib Warning: Citation `Sawyer2012' on page 1 undefined on input line
- 104.
+ 45.
+
+
+Package natbib Warning: Citation `Biercuk2010' on page 1 undefined on input lin
+e 45.
 
 
 Package natbib Warning: Citation `Sawyer2012' on page 1 undefined on input line
- 104.
+ 45.
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 104--105
+Package natbib Warning: Citation `Shaniv2016' on page 1 undefined on input line
+ 45.
+
+
+Package natbib Warning: Citation `Knunz2010' on page 1 undefined on input line 
+45.
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 45--46
 []\OT1/cmr/m/n/10 Crystals of laser-cooled, trapped ions be-have as
  []
 
-<figures/expt_cpmg.png, id=1, 432.86719pt x 455.45157pt>
-File: figures/expt_cpmg.png Graphic file (type png)
 
-<use figures/expt_cpmg.png>
-Package pdftex.def Info: figures/expt_cpmg.png used on input line 112.
-(pdftex.def)             Requested size: 229.49844pt x 241.47157pt.
+Package natbib Warning: Citation `Bollinger2013' on page 1 undefined on input l
+ine 47.
 
 
-LaTeX Warning: Reference `Hodf' on page 1 undefined on input line 123.
+Package natbib Warning: Citation `Sawyer2014' on page 1 undefined on input line
+ 47.
+
+
+Package natbib Warning: Citation `Ivanov2016' on page 1 undefined on input line
+ 47.
+
+
+Package natbib Warning: Citation `Itano1993' on page 1 undefined on input line 
+47.
+
+
+Package natbib Warning: Citation `Bollinger2013' on page 1 undefined on input l
+ine 51.
+
+
+Package natbib Warning: Citation `Sawyer2014' on page 1 undefined on input line
+ 51.
+
+
+Package natbib Warning: Citation `Bohnet2015' on page 1 undefined on input line
+ 51.
+
+<figures/expt.png, id=1, 483.30562pt x 357.58594pt>
+File: figures/expt.png Graphic file (type png)
+ <use figures/expt.png>
+Package pdftex.def Info: figures/expt.png used on input line 54.
+(pdftex.def)             Requested size: 246.0pt x 182.01175pt.
+
+
+Package natbib Warning: Citation `SuppMat' on page 1 undefined on input line 55
+.
+
+
+Package natbib Warning: Citation `SuppMat' on page 1 undefined on input line 55
+.
+
+
+Package natbib Warning: Citation `Bohnet2015' on page 1 undefined on input line
+ 59.
+
+
+Package natbib Warning: Citation `Wineland1998a' on page 1 undefined on input l
+ine 61.
+
+
+Package natbib Warning: Citation `Britton2012' on page 1 undefined on input lin
+e 61.
+
+
+LaTeX Warning: Reference `Hodf' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Reference `Hodf' on page 1 undefined on input line 63.
+
+
+Package natbib Warning: Citation `Uys2010' on page 1 undefined on input line 67
+.
+
+
+Package natbib Warning: Citation `Kotler2011' on page 1 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `SuppMat' on page 1 undefined on input line 67
+.
 
 [1{C:/Users/kag3/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 125.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 68.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 125.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 68.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
 
-Package natbib Warning: Citation `Uys2010' on page 2 undefined on input line 12
-7.
+Package natbib Warning: Citation `Kotler2013' on page 2 undefined on input line
+ 69.
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 131--132
+Underfull \hbox (badness 1221) in paragraph at lines 73--74
 []\OT1/cmr/m/n/10 To cre-ate the steady-state COM ax-ial os-cil-la-tion
  []
 
-<figures/lineshape.png, id=16, 1282.03969pt x 858.95906pt>
+<figures/lineshape.png, id=17, 1282.03969pt x 858.95906pt>
 File: figures/lineshape.png Graphic file (type png)
 
 <use figures/lineshape.png>
-Package pdftex.def Info: figures/lineshape.png used on input line 138.
-(pdftex.def)             Requested size: 229.49844pt x 153.75403pt.
-
-<figures/measurement_strength_inset_z2_485.png, id=17, 493.0922pt x 475.7775pt>
-File: figures/measurement_strength_inset_z2_485.png Graphic file (type png)
-<use figures/measurement_strength_inset_z2_485.png>
-Package pdftex.def Info: figures/measurement_strength_inset_z2_485.png used on 
-input line 143.
-(pdftex.def)             Requested size: 229.49844pt x 221.44478pt.
+Package pdftex.def Info: figures/lineshape.png used on input line 77.
+(pdftex.def)             Requested size: 246.0pt x 164.81602pt.
 
 
-LaTeX Warning: Reference `Bessel' on page 2 undefined on input line 147.
-
-[2 <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/expt_cpmg.pn
-g>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 148.
+Package natbib Warning: Citation `SuppMat' on page 2 undefined on input line 81
+.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 148.
+LaTeX Warning: Reference `Bessel' on page 2 undefined on input line 81.
 
 
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+Package natbib Warning: Citation `Britton2012' on page 2 undefined on input lin
+e 81.
 
-<figures/sensing_limit.png, id=27, 1257.19687pt x 846.16125pt>
+
+Package natbib Warning: Citation `SuppMat' on page 2 undefined on input line 81
+.
+
+[2 <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/expt.png> <C
+:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/lineshape.png>]
+<figures/odf_strength_bloch.png, id=30, 479.54156pt x 469.755pt>
+File: figures/odf_strength_bloch.png Graphic file (type png)
+
+<use figures/odf_strength_bloch.png>
+Package pdftex.def Info: figures/odf_strength_bloch.png used on input line 85.
+(pdftex.def)             Requested size: 246.0pt x 240.98395pt.
+
+
+Package natbib Warning: Citation `QuTip' on page 3 undefined on input line 86.
+
+
+Package natbib Warning: Citation `QuTip' on page 3 undefined on input line 86.
+
+<figures/sensing_limit.png, id=31, 1257.19687pt x 846.16125pt>
 File: figures/sensing_limit.png Graphic file (type png)
 
 <use figures/sensing_limit.png>
-Package pdftex.def Info: figures/sensing_limit.png used on input line 150.
-(pdftex.def)             Requested size: 229.49844pt x 154.45865pt.
+Package pdftex.def Info: figures/sensing_limit.png used on input line 89.
+(pdftex.def)             Requested size: 246.0pt x 165.56242pt.
 
 
-LaTeX Warning: Reference `eq:signal/noise' on page 3 undefined on input line 16
-3.
-
-[3 <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/lineshape.pn
-g> <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/measurement_
-strength_inset_z2_485.png> <C:/Users/kag3/Documents/GitHub/amplitude_sensing_pa
-per/figures/sensing_limit.png>]
-
-LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 177.
+LaTeX Warning: Reference `eq:limiting' on page 3 undefined on input line 90.
 
 
-LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 178.
+LaTeX Warning: Reference `eq:limiting' on page 3 undefined on input line 90.
 
 
-LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 183.
+LaTeX Warning: Reference `eq:signal/noise' on page 3 undefined on input line 94
+.
+
+
+Package natbib Warning: Citation `SuppMat' on page 3 undefined on input line 98
+.
+
+[3 <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/odf_strength
+_bloch.png> <C:/Users/kag3/Documents/GitHub/amplitude_sensing_paper/figures/sen
+sing_limit.png>]
+
+LaTeX Warning: Reference `eq:limiting' on page 4 undefined on input line 102.
 
 
 Package natbib Warning: Citation `Hume2011' on page 4 undefined on input line 1
-86.
+02.
 
 
-Package natbib Warning: Citation `Hempel2013' on page 4 undefined on input line
- 191.
+Package natbib Warning: Citation `Biercuk2011' on page 4 undefined on input lin
+e 102.
+
+
+Package natbib Warning: Citation `SuppMat' on page 4 undefined on input line 10
+2.
+
+
+Package natbib Warning: Citation `Bohnet2015' on page 4 undefined on input line
+ 102.
 
 
 Package natbib Warning: Citation `Arias2012' on page 4 undefined on input line 
-191.
+104.
 
 
 Package natbib Warning: Citation `Chaudhuri2015' on page 4 undefined on input l
-ine 191.
+ine 104.
 
-(C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.bbl
-! Undefined control sequence.
-l.74 ...61102} (\bibinfo {year} {2016})},\ \Eprint
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.86   {2014})},\ \Eprint
-                          {http://arxiv.org/abs/0712.1618} {arXiv:0712.1618}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package natbib Warning: Citation `Sawyer2014' on page 4 undefined on input line
+ 106.
 
-! Undefined control sequence.
-l.108   (\bibinfo {year} {2013})},\ \Eprint
-                                            {http://arxiv.org/abs/arXiv:1206...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.121 ...{820} (\bibinfo {year} {2009})},\ \Eprint
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package natbib Warning: Citation `Hempel2013' on page 4 undefined on input line
+ 106.
 
-! Undefined control sequence.
-l.138 ...} {1} (\bibinfo {year} {2010})},\ \Eprint
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.159   \Eprint
-                {http://arxiv.org/abs/1111.7236} {arXiv:1111.7236} \BibitemShut
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.174   (\bibinfo {year} {2014})},\ \Eprint
-                                            {http://arxiv.org/abs/1312.4896}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.189 ...} {\  (\bibinfo {year} {2016})},\ \Eprint
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.203   {2014})},\ \Eprint
-                           {http://arxiv.org/abs/1410.6191} {arXiv:1410.6191}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.220 ...{683} (\bibinfo {year} {2009})},\ \Eprint
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.233   (\bibinfo {year} {2010})},\ \Eprint
-                                            {http://arxiv.org/abs/1004.0780}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.240   }\href@noop
-                    {} {\bibfield  {journal} {\bibinfo  {journal} {ArXiv e-p...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.242   \Eprint
-                {http://arxiv.org/abs/arXiv:1602.08645v1} {arXiv:arXiv:1602....
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.268   10.1103/PhysRevA.89.033408},\ \Eprint
-                                              {http://arxiv.org/abs/1401.0672}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.276   \Eprint
-                {http://arxiv.org/abs/1606.07299} {arXiv:1606.07299} \Bibite...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.305 ...\ \bibnamefont {Bollinger}},\ }\href@noop
-                                                   {} {\bibfield  {journal}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.307   {year} {2015})},\ \Eprint
-                                  {http://arxiv.org/abs/1512.03756}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.323   {1689} (\bibinfo {year} {1998})},\ \Eprint
-                                                   {http://arxiv.org/abs/971...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.339 ...{489} (\bibinfo {year} {2012})},\ \Eprint
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.352   {2011})},\ \Eprint
-                           {http://arxiv.org/abs/1101.4885} {arXiv:1101.4885}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.376   (\bibinfo {year} {2011})},\ \Eprint
-                                            {http://arxiv.org/abs/1103.3334}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-)
-Underfull \hbox (badness 3396) in paragraph at lines 53--200
-[]\OT1/cmr/m/n/10 Weber1966,  ()Caves1980,  ()Ab-bott2016,  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 pelmeyer2014,  (), http://arxiv.org/abs/0712.1618
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:0712.1618 Butt2005,  ()Palo-maki2013,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 (), http://arxiv.org/abs/arXiv:1206.5562v1
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:arXiv:1206.5562v1 Teufel2009,  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 berger2010,  (), http://arxiv.org/abs/0904.4051
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:0904.4051 West-phal2012,  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/1111.7236 arXiv:1111.7236
- []
-
-
-Underfull \hbox (badness 1783) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 Schrep-pler2014a,  (), http://arxiv.org/abs/1312.4896
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:1312.4896 Kam-pel2016 (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/1607.06831 arXiv:1607.06831
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 Wil-son2014a,  (), http://arxiv.org/abs/1410.6191
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:1410.6191 Jost2009,  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/0901.4779 arXiv:0901.4779
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 Bier-cuk2010,  (), http://arxiv.org/abs/1004.0780
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:1004.0780 Shaniv2016  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/arXiv:1602.08645v1
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:arXiv:1602.08645v1 Knunz2010,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 ()Sawyer2014 (), 10.1103/Phys-RevA.89.033408,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/1401.0672 arXiv:1401.0672
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 Ivanov2016,  (), http://arxiv.org/abs/1606.07299
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:1606.07299 Itano1993,  ()Bohnet2015  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/1512.03756 arXiv:1512.03756
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 Wineland1998a,  (), http://arxiv.org/abs/9710025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:9710025 [quant-ph] Brit-ton2012,  (),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 http://arxiv.org/abs/1204.5789 arXiv:1204.5789
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 Kotler2011,  (), http://arxiv.org/abs/1101.4885
- []
-
-
-Underfull \hbox (badness 5147) in paragraph at lines 53--200
-\OT1/cmr/m/n/10 arXiv:1101.4885 Kotler2013,  ()Bier-cuk2011,  (),
- []
-
+(C:\Users\kag3\Documents\GitHub\amplitude_sensing_paper\word_count.bbl)
 
 Package natbib Warning: There were undefined citations.
 
@@ -770,19 +599,15 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
  ) 
 Here is how much of TeX's memory you used:
- 5112 strings out of 493643
- 73822 string characters out of 3135818
- 182429 words of memory out of 3000000
- 8461 multiletter control sequences out of 15000+200000
- 6985 words of font info for 26 fonts, out of 3000000 for 9000
+ 5120 strings out of 493643
+ 73798 string characters out of 3135818
+ 174957 words of memory out of 3000000
+ 8466 multiletter control sequences out of 15000+200000
+ 8723 words of font info for 31 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,8n,38p,1802b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,38p,1816b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx9.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts
@@ -801,10 +626,11 @@ ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ka
 g3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
 C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy7.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy9.pfb>
-Output written on word_count.pdf (4 pages, 641752 bytes).
+msfonts/cm/cmsy9.pfb><C:/Users/kag3/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb>
+Output written on word_count.pdf (4 pages, 644062 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
